@@ -1,0 +1,282 @@
+.container {
+  background: linear-gradient(
+    to bottom,
+    #8ace42 50%,
+
+    #e6ffcb 100%
+  );
+
+  margin: 12px;
+  padding: 0px;
+  border-radius: 12px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 80px 120px 80px;
+  padding-top: 40px;
+}
+
+.waitListButton > a {
+  background-color: #fff;
+  padding: 14px 32px;
+  border-radius: 100px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  text-decoration: none;
+  color: #262424;
+  cursor: pointer;
+}
+
+.mainText {
+  max-width: 800px;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.mainText > button {
+  padding: 6px 16px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  text-transform: capitalize;
+  border-radius: 100px;
+}
+
+.mainText > h1 {
+  font-weight: 600;
+  font-size: 72px;
+  line-height: 112.00000000000001%;
+  color: #ffffff;
+  text-align: center;
+}
+.italics {
+  font-family: "Source Serif 4", sans-serif;
+  font-style: italic;
+}
+
+.mainText > p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  color: #ffffff;
+  text-align: center;
+  max-width: 443px;
+  margin: 0 auto;
+}
+
+.form {
+  max-width: 520px;
+  margin: 40px auto 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 100px;
+}
+
+.form > input {
+  width: 100%;
+  padding: 14px 24px;
+  border: 0px;
+  background: transparent;
+  outline: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.form > input::placeholder {
+  color: #fff;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+}
+
+.form > button {
+  width: 200px;
+  padding: 14px 32px;
+  border-radius: 100px;
+  border: 0px;
+  color: #262424;
+  background: #ffffff;
+}
+
+.heroImage {
+  display: flex;
+  padding-top: 103px;
+  align-items: center;
+  width: 100%;
+  margin: 0px auto;
+  height: auto;
+}
+
+/* .blur {
+  position: absolute;
+  top: Calc(100%+ 70px);
+  width: 100%;
+  height: auto;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+} */
+
+.heroImageMobile {
+  display: none;
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: #fff;
+  border: none;
+  padding: 14px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background-color: #262424;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Mobile Menu Overlay */
+.mobileMenuOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 9999;
+  animation: slideIn 0.3s ease;
+}
+
+.mobileMenuHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #262424;
+}
+
+.mobileMenuContent {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  height: 120px;
+  justify-content: flex-end;
+}
+
+.joinWaitlistButton {
+  background: #8ace42;
+  color: #fff;
+  text-align: center;
+  padding: 24px;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 18px;
+  text-decoration: none;
+  display: block;
+  letter-spacing: 0.5px;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0px 12px;
+    margin: 0px;
+    border-radius: 0px 0px 12px 12px;
+  }
+  .header {
+    margin: 0px 0px 80px 0px;
+    align-items: center;
+  }
+  .mainText > h1 {
+    font-size: 32px;
+  }
+
+  .form {
+    padding: 0px;
+    background: transparent;
+    border: 0px;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .form > input {
+    max-width: 520px;
+    padding: 14px 24px !important;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 100px;
+  }
+  .form > button {
+    width: 100%;
+  }
+
+  .heroImage {
+    display: none;
+  }
+
+  .heroImageMobile {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-top: 103px;
+    overflow: hidden;
+  }
+  .hamburger {
+    display: flex;
+    color: #ffffff !important;
+    background-color: transparent;
+  }
+
+  .hamburger .item {
+    background-color: #ffffff !important;
+  }
+
+  .waitListButton > a {
+    display: none;
+  }
+}

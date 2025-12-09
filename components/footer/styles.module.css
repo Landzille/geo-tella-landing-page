@@ -1,0 +1,57 @@
+.container {
+  padding: 120px 80px 40px 80px;
+}
+
+.contain {
+  display: flex;
+  justify-content: space-between;
+}
+
+.colOne {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.colOne > p {
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 16px;
+  line-height: 100%;
+}
+
+.colTwo > h2 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  width: 281px;
+  padding-bottom: 12px;
+}
+
+.colTwo > p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 28px;
+  color: #000000cc;
+  width: 590px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 80px 12px 80px 12px;
+  }
+
+  .contain {
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .colTwo > h2 {
+    width: unset;
+  }
+
+  .colTwo > p {
+    width: unset;
+  }
+}

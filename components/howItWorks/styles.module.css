@@ -1,0 +1,81 @@
+.container {
+  background: #f8fafc;
+  padding: 120px 80px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 16px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  padding-bottom: 80px;
+}
+
+.header > button {
+  border: 1px solid #8ace42;
+  padding: 6px 16px;
+  background: #8ace420a;
+  border-radius: 100px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  color: #8ace42;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header > h2 {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 72px;
+  color: #000000;
+}
+
+.card {
+  padding: 24px;
+}
+
+.card > img {
+  width: 100%;
+  height: auto;
+}
+
+.card > h3 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  padding-top: 34px;
+}
+
+.card > p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0%;
+  color: #000000cc;
+  padding-top: 12px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 80px 12px;
+  }
+  .header > h2 {
+    font-size: 24px;
+    line-height: 100%;
+  }
+
+  .content {
+    grid-template-columns: 2fr;
+  }
+}

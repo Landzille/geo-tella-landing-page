@@ -1,0 +1,80 @@
+.container {
+  padding: 120px 80px;
+}
+
+.content {
+  background: linear-gradient(
+    to bottom,
+    #8ace42 80%,
+
+    #e6ffcb 100%
+  );
+  padding: 127px 0px;
+  border-radius: 32px;
+}
+
+.textContent {
+  width: 790px;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+
+.textContent > button {
+  padding: 6px 16px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  text-transform: capitalize;
+  border-radius: 100px;
+}
+
+.textContent > h2 {
+  font-family: Plus Jakarta Sans;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 112.00000000000001%;
+  text-align: center;
+  color: #ffffff;
+}
+
+.textContent > h2 span {
+  font-family: "Source Serif 4", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.textContent > a {
+  padding: 14px 32px;
+  text-decoration: none;
+  background: #ffffff;
+  color: #262424;
+  border-radius: 100px;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+@media (max-width: 768) {
+  .container {
+    padding: 80px 12px;
+  }
+
+  .content {
+    padding: 80px 16px;
+  }
+
+  .textContent {
+    width: unset;
+  }
+
+  .textContent > h2 {
+    font-size: 24px;
+  }
+}

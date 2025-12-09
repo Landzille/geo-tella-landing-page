@@ -1,0 +1,106 @@
+.container {
+  padding: 120px 80px;
+  background: #ffffff;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.textContent > button {
+  border: 1px solid #8ace42;
+  padding: 6px 16px;
+  background: #8ace420a;
+  border-radius: 100px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  color: #8ace42;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.textContent > h2 {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 72px;
+  color: #000000;
+}
+
+.textContent > p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: #000000;
+}
+
+.firstCard {
+  margin-top: 80px;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 2fr 2fr 2fr;
+}
+
+.card {
+  padding: 24px;
+  background: #f8fafc;
+  border-radius: 24px;
+}
+
+.card > img {
+  width: 100%;
+  height: auto;
+}
+
+.card > h2 {
+  font-weight: 600;
+  width: 340px;
+  font-size: 24px;
+  line-height: 100%;
+  margin-top: 32px;
+}
+
+.card > p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #000000cc;
+  padding-top: 12px;
+}
+
+.secondCard {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 80px 12px;
+  }
+
+  .textContent > h2 {
+    width: unset;
+    font-size: 24px;
+    line-height: 100%;
+  }
+  .firstCard {
+    grid-template-columns: 2fr;
+  }
+
+  .secondCard {
+    grid-template-columns: 2fr;
+  }
+
+  .card > h2 {
+    width: unset;
+    font-size: 24px;
+  }
+}

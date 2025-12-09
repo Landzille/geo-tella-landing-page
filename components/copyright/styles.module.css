@@ -1,0 +1,25 @@
+.container {
+  background: linear-gradient(
+      360deg,
+      rgba(247, 249, 247, 0) -4.08%,
+      #f7f9f7 90.7%
+    ),
+    url("../../public/assets/map.png");
+  background-position: center;
+  background-size: contain;
+  background: url("../../public/assets/map.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container > p {
+  padding: 100px 0px 40px 0px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .container > p {
+    padding: 57px 0px 20px 0px;
+  }
+}
