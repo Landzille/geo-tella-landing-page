@@ -15,13 +15,13 @@ export const data = [
   },
   {
     image: "/assets/frame2.png",
-    title: "Hear History Where It Happened",
+    title: "Listen to your History",
     texts:
       "Your GPS location unlocks audio and text stories that bring your surroundings to life",
   },
   {
     image: "/assets/frame3.png",
-    title: "Gamified Exploration (Duolingo-Style)",
+    title: "Gamified Exploration",
     texts:
       "Earn XP, maintain streaks, complete quests, and unlock badges as you explore.",
   },
@@ -30,13 +30,13 @@ export const data = [
 export const data2 = [
   {
     image: "/assets/frame5.png",
-    title: "For Travelers, Students & Everyday Explorers",
+    title: "For Travelers, Students and Everyday Explorers",
     texts:
       "Geotela works whether you’re on a trip, commuting, or simply curious about the world around you.",
   },
   {
     image: "/assets/frame4.png",
-    title: "Discover Your City — Or a New One",
+    title: "Discover Your City or a New One",
     texts:
       "You don’t need to travel far. Geotela helps you fall in love with the places you pass every day.",
   },
@@ -51,7 +51,7 @@ export const howitworks = [
   {
     image: "/assets/newFrame2.png",
     title: "Move Through the World",
-    texts: "Walk, drive, or cycle — stories update as you go.",
+    texts: "Walk, drive, or cycle. Your stories update as you go.",
   },
   {
     image: "/assets/newFrame3.png",

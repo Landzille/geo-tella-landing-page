@@ -5,15 +5,17 @@ const About = () => {
   return (
     <div className={styles.content}>
       <div className={styles.colOne}>
-        <h2>Meet Geotela — The Storytelling Navigation App</h2>
+        <h2>Meet Geotela The Storytelling Navigation App</h2>
       </div>
       <div className={styles.colTwo}>
         <p>
           Geotela turns your everyday movement into a world-class learning
-          adventure. Whether you’re traveling abroad or exploring your own city,
-          Geotela reveals the <span>hidden stories</span>, <span>history</span>,
-          <span>legends</span>, and <span>cultural gems</span> around you — in
-          real time.
+          adventure.
+          <br />
+          Whether you’re traveling abroad or exploring your own city, Geotela
+          reveals the <span>hidden stories</span>, <span>history</span>,
+          <span>&nbsp;legends</span>, and <span>cultural gems &nbsp;</span>{" "}
+          around you in real time.
         </p>
         <div className={styles.otherText}>
           <p>

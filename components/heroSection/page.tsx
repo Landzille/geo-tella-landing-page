@@ -39,7 +39,7 @@ const HeroSection = () => {
           </h1>
           <p>
             Your interactive travel buddy for discovering the world through
-            <span className={styles.italics}>stories, culture,</span> and{" "}
+            <span className={styles.italics}> stories, culture,</span> and{" "}
             <span className={styles.italics}>history. </span>
           </p>
         </div>
