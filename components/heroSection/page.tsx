@@ -20,7 +20,7 @@ const HeroSection = () => {
             priority
           />
           <div className={styles.waitListButton}>
-            <Link href={"#"}>Join WaitList</Link>
+            <Link href={"#"}>JOIN WAITLIST</Link>
             <button
               onClick={() => setIsMenuOpen(true)}
               className={styles.hamburger}

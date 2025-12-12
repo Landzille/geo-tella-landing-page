@@ -21,7 +21,7 @@ const About = () => {
           <p>
             Think Google Maps,
             {/* <Image src="/assets/maps.png" alt="maps" width={24} height={24} /> */}
-            &nbsp; Duolingo,
+            &nbsp; Learning,
             {/* <Image
               src="/assets/duolingo.png"
               alt="maps"

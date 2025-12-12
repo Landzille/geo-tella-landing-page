@@ -45,17 +45,17 @@ export const data2 = [
 export const howitworks = [
   {
     image: "/assets/newFrame1.png",
-    title: "Choose a City or Start Exploring",
+    title: "Choose a City and Start Exploring",
     texts: "Pick your location and let Geotela guide your discovery.",
   },
   {
     image: "/assets/newFrame2.png",
-    title: "Move Through the World",
+    title: "Move Around the World in your style",
     texts: "Walk, drive, or cycle. Your stories update as you go.",
   },
   {
     image: "/assets/newFrame3.png",
-    title: "Unlock Story Pins",
+    title: "Unlock Stories Within your Location",
     texts:
       "Discover short, engaging bites of history, culture, myths, and local secrets.",
   },
@@ -71,7 +71,7 @@ export const otherList = [
   {
     image: <Navigation />,
     title: "Navigation + Storytelling",
-    texts: "Directions meet history and culture.",
+    texts: "Direction meets history and culture.",
   },
   {
     image: <Gamified />,
@@ -88,7 +88,7 @@ export const otherList = [
 export const otherItems = [
   {
     icon: <Travellers />,
-    title: "Travelers & Tourists",
+    title: "Travelers and Tourists",
     text: "Learn the history of every place you visit.",
   },
 ];
@@ -96,7 +96,7 @@ export const otherItems = [
 export const otherItems2 = [
   {
     icon: <Student />,
-    title: "Students & Young Learners",
+    title: "Students and Young Learners",
     text: "Turn the world into a fun classroom.",
   },
   {
@@ -106,7 +106,7 @@ export const otherItems2 = [
   },
   {
     icon: <Culture />,
-    title: "Solo Explorers & Culture Lovers",
+    title: "Solo Explorers and Culture Lovers",
     text: "Experience cities deeply, not passively",
   },
 ];
