@@ -52,13 +52,13 @@ const HeroSection = () => {
       await fetchPromise;
 
       // If we get here without throwing, assume success
-      showToast("success", "🎉 You're on the waitlist! Check your email soon.");
+      showToast("success", "🎉 You're on the waitlist!");
       setEmail("");
     } catch (error) {
       // Even with errors, data might have been saved due to no-cors
       // So we show a softer message
       console.log("Fetch completed (CORB is normal):", error);
-      showToast("success", "🎉 You're on the waitlist! Check your email soon.");
+      showToast("success", "🎉 You're on the waitlist!");
       setEmail("");
     } finally {
       setLoading(false);
