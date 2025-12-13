@@ -66,7 +66,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="waitlistForm">
       {/* Toast Notification */}
       {toast.show && (
         <div className={styles.toastContainer}>

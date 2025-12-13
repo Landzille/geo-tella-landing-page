@@ -12,7 +12,7 @@ const ComingSoon = () => {
             Explore your city or the world with<span> stories, games, </span>and
             <span> quests</span> that make every journey unforgettable.
           </h2>
-          <Link href="#waitlist">JOIN OUR WAITLIST</Link>
+          <Link href="#waitlistForm">JOIN OUR WAITLIST</Link>
         </div>
       </div>
     </div>
