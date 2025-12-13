@@ -19,7 +19,7 @@ const About = () => {
         </p>
         <div className={styles.otherText}>
           <p>
-            Think Google Maps,
+            Think Maps,
             {/* <Image src="/assets/maps.png" alt="maps" width={24} height={24} /> */}
             &nbsp; Learning,
             {/* <Image

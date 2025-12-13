@@ -61,7 +61,7 @@ export const howitworks = [
   },
   {
     image: "/assets/newFrame4.png",
-    title: "Play, Learn & Level Up",
+    title: "Play, Learn and Level Up",
     texts:
       "Earn points for every story you unlock, complete challenges, and maintain  your streaks.",
   },
