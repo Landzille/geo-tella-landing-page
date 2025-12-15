@@ -12,8 +12,8 @@ const About = () => {
           Geotela turns your everyday movement into a world-class learning
           adventure.
           <br />
-          Whether you’re traveling abroad or exploring your own city, Geotela
-          reveals the <span>hidden stories</span>, <span>history</span>,
+          If you’re traveling abroad or exploring your own city, Geotela reveals
+          the <span>hidden stories</span>, <span>history</span>,
           <span>&nbsp;legends</span>, and <span>cultural gems &nbsp;</span>{" "}
           around you in real time.
         </p>

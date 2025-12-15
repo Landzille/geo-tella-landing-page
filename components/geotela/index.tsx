@@ -9,7 +9,6 @@ const GeotellaComp = () => {
         <div className={styles.imgHead}>
           <Image src="/assets/fly.png" width={67} height={80} alt="fly" />
           <h2>Geotela Is For</h2>
-          <p>Travel Smarter, Learn Deeper, Explore Better</p>
         </div>
         <div>
           {otherItems.map((items, index) => {
