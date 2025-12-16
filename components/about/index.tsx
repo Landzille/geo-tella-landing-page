@@ -21,14 +21,14 @@ const About = () => {
           <p>
             Think Maps,
             {/* <Image src="/assets/maps.png" alt="maps" width={24} height={24} /> */}
-            &nbsp; Learning,
+            &nbsp; Think Culture and History,
             {/* <Image
               src="/assets/duolingo.png"
               alt="maps"
               width={24}
               height={24}
             /> */}
-            &nbsp;a friendly tour guide,
+            &nbsp; and a friendly tour guide,
             {/* <Image src="/assets/next.png" alt="maps" width={24} height={24} /> */}
             &nbsp; all in one
             {/* <Image src="/assets/all.png" alt="maps" width={24} height={24} /> */}
