@@ -103,7 +103,7 @@ const HeroSection = () => {
           />
 
           <div className={styles.waitListButton}>
-            <Link href="#waitlist">JOIN WAITLIST</Link>
+            <Link href="#waitlist">Get Early Access — Free</Link>
 
             <button
               onClick={() => setIsMenuOpen(true)}
@@ -118,15 +118,19 @@ const HeroSection = () => {
 
         {/* HERO TEXT */}
         <div className={styles.mainText}>
-          <button>COMING SOON</button>
+          <button>COMING JUNE 11, 2026</button>
           <h1>
-            Every Place Has a <span className={styles.italics}>Story</span>. We
-            Help <span className={styles.italics}>You</span> Hear It.
+            Experience Every Place Like You&apos;ve Always Known It.
+            {/* <span className={styles.italics}>Story</span>. We Help{" "}
+            <span className={styles.italics}>You</span> Hear It. */}
           </h1>
           <p>
-            Your interactive travel buddy for discovering the world through
-            <span className={styles.italics}> stories, culture,</span> and{" "}
-            <span className={styles.italics}>history.</span>
+            The neighbourhoods locals love. The stories no guidebook tells. The
+            <span className={styles.italics}>
+              {" "}
+              immersive, verified experience{" "}
+            </span>
+            of any place before you even arrive.
           </p>
         </div>
 
@@ -146,27 +150,18 @@ const HeroSection = () => {
             disabled={loading}
             className={loading ? styles.buttonLoading : ""}
           >
-            {loading ? "Submitting..." : "JOIN WAITLIST"}
+            {loading ? "Submitting..." : "Get Early Access — Free"}
           </button>
         </div>
 
         {/* HERO IMAGES */}
         <Image
-          src="/assets/hero2.png"
-          alt="hero"
-          width={1000}
-          height={1000}
-          priority
-          className={styles.heroImage}
-        />
-
-        <Image
           src="/assets/hero.png"
           alt="hero"
-          width={1000}
-          height={1000}
+          width={800}
+          height={800}
           priority
-          className={styles.heroImageMobile}
+          className={styles.heroImage}
         />
       </div>
 

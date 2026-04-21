@@ -4,7 +4,7 @@ import styles from "./styles.module.css";
 const Copyright = () => {
   return (
     <div className={styles.container}>
-      <p>© 2025 GEOTELA</p>
+      <p>© {new Date().getFullYear()} GeoTela. Built by Exequi.</p>
     </div>
   );
 };

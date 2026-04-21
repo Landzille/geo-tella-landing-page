@@ -6,7 +6,9 @@ import GeotellaComp from "@/components/geotela";
 import HeroSection from "@/components/heroSection/page";
 import HowitWorks from "@/components/howItWorks";
 import OtherStuffs from "@/components/otherstuffs";
+import VerificationBand from "@/components/verificationBand";
 import WhatWeDo from "@/components/whatWeDo";
+import WorldCupBand from "@/components/worldCupBand";
 import React from "react";
 
 const LandingPage = () => {
@@ -15,9 +17,11 @@ const LandingPage = () => {
       <HeroSection />
       <About />
       <WhatWeDo />
+      <VerificationBand />
       <HowitWorks />
       <OtherStuffs />
       <GeotellaComp />
+      <WorldCupBand />
       <ComingSoon />
       <Footer />
       <Copyright />

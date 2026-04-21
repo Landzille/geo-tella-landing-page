@@ -12,11 +12,8 @@ const OtherStuffs = () => {
             What Makes <span>Geotela</span> Unique
           </h2>
           <p>
-            GeoTela isn’t just about getting from A → B. It’s about
-            <span className={styles.others}>
-              {" "}
-              making every step meaningful.
-            </span>
+            Every place has more in it
+            <span className={styles.others}> than anyone showed you</span>
           </p>
         </div>
       </div>

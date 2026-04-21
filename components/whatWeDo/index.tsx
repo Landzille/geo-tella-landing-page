@@ -9,7 +9,7 @@ const WhatWeDo = () => {
         <div className={styles.textContent}>
           <button>WHY GEOTELA</button>
           <h2>Why People Love Geotela</h2>
-          <p>Travel Smarter, Learn Deeper, Explore Better</p>
+          <p>Stop visiting places. Start experiencing them.</p>
         </div>
         <div className={styles.firstCard}>
           {data.map((item, index) => {

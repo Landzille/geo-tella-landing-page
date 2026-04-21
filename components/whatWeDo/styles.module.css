@@ -11,7 +11,7 @@
 }
 
 .textContent > button {
-  border: 1px solid #8ace42;
+  border: 1px solid #00bd7d;
   padding: 6px 16px;
   background: #8ace420a;
   border-radius: 100px;
@@ -19,7 +19,7 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 100%;
-  color: #8ace42;
+  color: #00bd7d;
   display: flex;
   flex-direction: column;
   align-items: center;

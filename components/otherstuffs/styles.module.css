@@ -1,16 +1,16 @@
 .container {
-  background: #1a202c;
+  background: #1c2939;
   padding: 120px 80px;
 }
 
 .header > button {
   padding: 6px 16px;
   background: #8ace420a;
-  border: 1px solid #8ace42;
+  border: 1px solid #00bd7d;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 400;
   font-size: 12px;
-  color: #8ace42;
+  color: #00bd7d;
   line-height: 100%;
   border-radius: 100px;
 }
@@ -30,7 +30,7 @@
 }
 
 .textFlex span {
-  color: #8ace42;
+  color: #00bd7d;
 }
 
 .textFlex p {
@@ -55,7 +55,7 @@
 }
 
 .gridItem {
-  background: #212937;
+  background: #202e40;
   padding: 24px;
   border-radius: 24px;
   display: flex;
@@ -68,7 +68,7 @@
   font-weight: 600;
   font-size: 24px;
   line-height: 100%;
-  color: #8ace42;
+  color: #00bd7d;
   padding-bottom: 12px;
 }
 

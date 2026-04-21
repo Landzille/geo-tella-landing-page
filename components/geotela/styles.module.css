@@ -52,7 +52,7 @@
   overflow: hidden;
   display: grid;
   gap: 16px;
-  grid-template-columns: 2fr 2fr 2fr;
+  grid-template-columns: 2fr 2fr;
   margin-top: 16px;
 }
 

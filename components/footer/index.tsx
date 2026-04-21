@@ -11,7 +11,7 @@ const Footer = () => {
       <div className={styles.contain}>
         <div className={styles.colOne}>
           <Image src="/assets/Logo2.png" width={182} height={48} alt="logo2" />
-          <p>Every Place Has a Story. Let’s Explore It Together.</p>
+          <p>Experience every place like you&apos;ve always known it.</p>
           <div className={styles.IconLists}>
             <Link
               href="https://www.instagram.com/geotela1?igsh=MThoZWtxaWJwYWJ4Zw=="
@@ -34,10 +34,10 @@ const Footer = () => {
           </div>
         </div>
         <div className={styles.colTwo}>
-          <h2>Join the Geotela Explorer Community</h2>
+          <h2>Join the GeoTela community</h2>
           <p>
-            Get updates, behind-the-scenes development drops, exclusive
-            insights, and launch announcements.
+            Get early access drops, verified intelligence, and the stories worth
+            knowing before you arrive.
           </p>
         </div>
       </div>

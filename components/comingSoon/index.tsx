@@ -9,10 +9,11 @@ const ComingSoon = () => {
         <div className={styles.textContent}>
           <button>COMING SOON</button>
           <h2>
-            Explore your city or the world with<span> stories, games, </span>and
-            <span> quests</span> that make every journey unforgettable.
+            Every place has more in it than anyone showed you.
+            <br />
+            <span>Stop visiting. Start experiencing.</span>
           </h2>
-          <Link href="#waitlistForm">JOIN OUR WAITLIST</Link>
+          <Link href="#waitlistForm">Get Early Access — Free</Link>
         </div>
       </div>
     </div>

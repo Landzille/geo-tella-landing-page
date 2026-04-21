@@ -1,0 +1,222 @@
+.band {
+  background-color: #1c2939;
+  width: 100%;
+  padding: 7rem 2rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.band::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 79px,
+    rgba(196, 232, 68, 0.025) 79px,
+    rgba(196, 232, 68, 0.025) 80px
+  );
+  pointer-events: none;
+}
+
+/* ─── Inner container ────────────────────────────────────── */
+
+.inner {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 5rem;
+}
+
+/* ─── Date badge ─────────────────────────────────────────── */
+
+.dateBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #00bd7d;
+  margin-bottom: 2.5rem;
+  border: 0.5px solid rgba(196, 232, 68, 0.25);
+  padding: 0.4rem 0.85rem;
+  border-radius: 100px;
+}
+
+.datePulse {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #00bd7d;
+  flex-shrink: 0;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(0.75);
+  }
+}
+
+/* ─── Stats headline ─────────────────────────────────────── */
+
+.stats {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 800;
+  font-size: clamp(3.2rem, 9vw, 7.2rem);
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  margin: 0 0 3.2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.08em;
+}
+
+.statLine {
+  display: block;
+  color: #f6ede4;
+}
+
+.statAccent {
+  color: #00bd7d;
+}
+
+/* ─── Body copy ──────────────────────────────────────────── */
+
+.body {
+  max-width: 580px;
+  margin-bottom: 2.8rem;
+}
+
+.body p {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.75;
+  color: #f6ede4;
+  margin: 0 0 1rem 0;
+}
+
+.body p:last-child {
+  margin-bottom: 0;
+}
+
+/* ─── CTA ────────────────────────────────────────────────── */
+
+.cta {
+  display: inline-block;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #00bd7d;
+  padding: 0.85rem 2rem;
+  border-radius: 100px;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.cta:hover {
+  background-color: #ffffff;
+  color: #00bd7d;
+  transform: translateY(-1px);
+}
+
+.cta:active {
+  transform: translateY(0);
+}
+
+/* ─── City ticker ────────────────────────────────────────── */
+
+.tickerWrapper {
+  width: 100%;
+  overflow: hidden;
+  padding: 1.2rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Fade masks at edges */
+.tickerWrapper::before,
+.tickerWrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+.tickerWrapper::before {
+  left: 0;
+  background: linear-gradient(to right, #1c2939, transparent);
+}
+.tickerWrapper::after {
+  right: 0;
+  background: linear-gradient(to left, #1c2939, transparent);
+}
+
+.tickerTrack {
+  display: flex;
+  width: max-content;
+  animation: ticker 28s linear infinite;
+}
+
+.tickerTrack:hover {
+  animation-play-state: paused;
+}
+
+@keyframes ticker {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.tickerItem {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #ffffff;
+  white-space: nowrap;
+  padding: 0 0.5rem;
+}
+
+.tickerDot {
+  margin-left: 0.8rem;
+  color: #2a3b1e;
+}
+
+/* ─── Responsive ─────────────────────────────────────────── */
+
+@media (max-width: 640px) {
+  .band {
+    padding: 5rem 20px 0;
+  }
+
+  .inner {
+    padding-bottom: 4rem;
+  }
+
+  .stats {
+    margin-bottom: 2.4rem;
+  }
+}

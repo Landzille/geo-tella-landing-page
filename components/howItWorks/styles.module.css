@@ -7,10 +7,13 @@
   display: grid;
   grid-template-columns: 2fr 2fr;
   gap: 16px;
+  align-items: center;
 }
 
 .header {
   display: flex;
+  max-width: 800px;
+  margin: auto;
   flex-direction: column;
   gap: 16px;
   align-items: center;
@@ -18,7 +21,7 @@
 }
 
 .header > button {
-  border: 1px solid #8ace42;
+  border: 1px solid #00bd7d;
   padding: 6px 16px;
   background: #8ace420a;
   border-radius: 100px;
@@ -26,7 +29,7 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 100%;
-  color: #8ace42;
+  color: #00bd7d;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,7 +39,8 @@
 .header > h2 {
   font-weight: 600;
   font-size: 48px;
-  line-height: 72px;
+  text-align: center;
+  line-height: 1.3;
   color: #000000;
 }
 

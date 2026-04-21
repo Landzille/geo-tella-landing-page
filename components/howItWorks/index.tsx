@@ -7,7 +7,7 @@ const HowitWorks = () => {
     <div className={styles.container}>
       <div className={styles.header}>
         <button>HOW IT WORKS</button>
-        <h2>How Geotela Works</h2>
+        <h2>From the Map to the Experience You Actually Came For.</h2>
       </div>
       <div className={styles.content}>
         {howitworks.map((item, index) => {

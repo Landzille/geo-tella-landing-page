@@ -9,29 +9,16 @@ const About = () => {
       </div>
       <div className={styles.colTwo}>
         <p>
-          Geotela turns your everyday movement into a world-class learning
-          adventure.
+          GeoTela puts you inside a place, not just on top of it. The hidden
+          neighbourhood.
           <br />
-          If you’re traveling abroad or exploring your own city, Geotela reveals
-          the <span>hidden stories</span>, <span>history</span>,
-          <span>&nbsp;legends</span>, and <span>cultural gems &nbsp;</span>{" "}
-          around you in real time.
+          The story the city has been keeping. The verified ground-truth
+          experience of any location, unlocked before you take a single step.
         </p>
         <div className={styles.otherText}>
           <p>
-            Think Maps,
-            {/* <Image src="/assets/maps.png" alt="maps" width={24} height={24} /> */}
-            &nbsp; Think Culture and History,
-            {/* <Image
-              src="/assets/duolingo.png"
-              alt="maps"
-              width={24}
-              height={24}
-            /> */}
-            &nbsp; and a friendly tour guide,
-            {/* <Image src="/assets/next.png" alt="maps" width={24} height={24} /> */}
-            &nbsp; all in one
-            {/* <Image src="/assets/all.png" alt="maps" width={24} height={24} /> */}
+            Think Maps. Think Culture and History. Think experiencing every
+            place like someone who has always known it.
           </p>
         </div>
       </div>

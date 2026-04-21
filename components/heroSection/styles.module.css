@@ -1,9 +1,9 @@
 .container {
   background: linear-gradient(
     to bottom,
-    #8ace42 50%,
+    #005629 50%,
 
-    #e6ffcb 100%
+    #005629 100%
   );
 
   margin: 12px;
@@ -31,7 +31,7 @@
 }
 
 .mainText {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0px auto;
   display: flex;
   flex-direction: column;
@@ -72,12 +72,12 @@
   line-height: 25px;
   color: #ffffff;
   text-align: center;
-  max-width: 443px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
 .form {
-  max-width: 520px;
+  max-width: 600px;
   margin: 40px auto 0 auto;
   display: flex;
   align-items: center;
@@ -107,7 +107,7 @@
 }
 
 .form > button {
-  width: 200px;
+  width: 400px;
   padding: 14px 32px;
   border-radius: 100px;
   border: 0px;
@@ -119,7 +119,7 @@
   display: flex;
   padding-top: 103px;
   align-items: center;
-  width: 100%;
+  width: 50%;
   margin: 0px auto;
   height: auto;
 }
@@ -339,16 +339,13 @@
   }
 
   .heroImage {
-    display: none;
-  }
-
-  .heroImageMobile {
     display: block;
     width: 100%;
     height: auto;
     padding-top: 103px;
     overflow: hidden;
   }
+
   .hamburger {
     display: flex;
     color: #ffffff !important;

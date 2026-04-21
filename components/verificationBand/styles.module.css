@@ -1,0 +1,114 @@
+.band {
+  background-color: #005629;
+  width: 100%;
+  padding: 6rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle texture grain */
+.band::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.04);
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* ─── Inner container ────────────────────────────────────── */
+
+.inner {
+  max-width: 860px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── Three marks row ────────────────────────────────────── */
+
+.marksRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 3rem;
+}
+
+.mark {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #f6ede4;
+  opacity: 0.9;
+}
+
+.markLabel {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #f6ede4;
+  opacity: 0.7;
+  margin-left: 6px;
+}
+
+/* ─── Line One ───────────────────────────────────────────── */
+
+.lineOne {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 600;
+  line-height: 1.18;
+  color: #f6ede4;
+  margin: 0 0 2.4rem 0;
+  letter-spacing: -0.01em;
+}
+
+/* ─── Line Two ───────────────────────────────────────────── */
+
+.lineTwo {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.65;
+  color: #f6ede4;
+  margin: 0 0 2.8rem 0;
+  max-width: 680px;
+  letter-spacing: 0.01em;
+}
+
+.accent {
+  font-style: italic;
+  color: #c9964a;
+  font-weight: 600;
+}
+
+/* ─── Line Three ─────────────────────────────────────────── */
+
+.lineThree {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 300;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* ─── Responsive ─────────────────────────────────────────── */
+
+@media (max-width: 640px) {
+  .band {
+    padding: 4rem 1.5rem;
+  }
+
+  .lineOne {
+    margin-bottom: 1.8rem;
+  }
+
+  .lineTwo {
+    margin-bottom: 2rem;
+  }
+}
