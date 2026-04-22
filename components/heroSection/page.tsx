@@ -95,9 +95,9 @@ const HeroSection = () => {
         {/* HEADER */}
         <div className={styles.header}>
           <Image
-            src="/assets/logo.png"
+            src="/assets/Logo.png"
             alt="logo"
-            width={220}
+            width={100}
             height={48}
             priority
           />
@@ -170,7 +170,7 @@ const HeroSection = () => {
         <div className={styles.mobileMenuOverlay}>
           <div className={styles.mobileMenuHeader}>
             <Image
-              src="/assets/logo2.png"
+              src="/assets/Logo.png"
               alt="logo"
               width={220}
               height={48}
@@ -191,7 +191,7 @@ const HeroSection = () => {
               className={styles.joinWaitlistButton}
               onClick={() => setIsMenuOpen(false)}
             >
-              JOIN WAITLIST
+              Get Early Access — Free
             </Link>
           </div>
         </div>

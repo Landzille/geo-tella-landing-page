@@ -10,7 +10,7 @@ const Footer = () => {
     <div className={styles.container}>
       <div className={styles.contain}>
         <div className={styles.colOne}>
-          <Image src="/assets/Logo2.png" width={182} height={48} alt="logo2" />
+          <Image src="/assets/Logo.png" width={182} height={48} alt="logo2" />
           <p>Experience every place like you&apos;ve always known it.</p>
           <div className={styles.IconLists}>
             <Link

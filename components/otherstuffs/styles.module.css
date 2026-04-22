@@ -55,7 +55,7 @@
 }
 
 .gridItem {
-  background: #202e40;
+  background: #f6ede4;
   padding: 24px;
   border-radius: 24px;
   display: flex;
@@ -68,12 +68,12 @@
   font-weight: 600;
   font-size: 24px;
   line-height: 100%;
-  color: #00bd7d;
+  color: #d43201;
   padding-bottom: 12px;
 }
 
 .otherTexts > p {
-  color: #ffffffcc;
+  color: #333232;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;

@@ -1,9 +1,9 @@
 .container {
   background: linear-gradient(
     to bottom,
-    #005629 50%,
+    #f6ede4 50%,
 
-    #005629 100%
+    #f6ede4 100%
   );
 
   margin: 12px;
@@ -18,15 +18,20 @@
   padding-top: 40px;
 }
 
+.header > img {
+  width: 13%;
+  height: auto;
+}
+
 .waitListButton > a {
-  background-color: #fff;
+  background-color: #005629;
   padding: 14px 32px;
   border-radius: 100px;
   font-weight: 500;
   font-size: 16px;
   line-height: 100%;
   text-decoration: none;
-  color: #262424;
+  color: #f6ede4;
   cursor: pointer;
 }
 
@@ -45,8 +50,8 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 100%;
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  color: #005629;
+  border: 1px solid #005629;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -58,7 +63,7 @@
   font-weight: 600;
   font-size: 72px;
   line-height: 112.00000000000001%;
-  color: #ffffff;
+  color: #1c2939;
   text-align: center;
 }
 .italics {
@@ -70,7 +75,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 25px;
-  color: #ffffff;
+  color: #1c2939;
   text-align: center;
   max-width: 600px;
   margin: 0 auto;
@@ -82,7 +87,7 @@
   display: flex;
   align-items: center;
   padding: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  border: 1px solid #1c2939;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -95,13 +100,13 @@
   border: 0px;
   background: transparent;
   outline: none;
-  color: #fff;
+  color: #005629;
   font-size: 16px;
   font-weight: 400;
 }
 
 .form > input::placeholder {
-  color: #fff;
+  color: #005629;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 16px;
 }
@@ -111,8 +116,8 @@
   padding: 14px 32px;
   border-radius: 100px;
   border: 0px;
-  color: #262424;
-  background: #ffffff;
+  color: #ffffff;
+  background: #005629;
 }
 
 .heroImage {
@@ -196,7 +201,7 @@
 }
 
 .joinWaitlistButton {
-  background: #8ace42;
+  background: #005629;
   color: #fff;
   text-align: center;
   padding: 24px;
@@ -310,6 +315,12 @@
     margin: 0px 0px 80px 0px;
     align-items: center;
   }
+
+  .header > img {
+    width: 40%;
+    height: auto;
+  }
+
   .mainText > h1 {
     font-size: 32px;
   }
@@ -348,12 +359,12 @@
 
   .hamburger {
     display: flex;
-    color: #ffffff !important;
+    color: #005629 !important;
     background-color: transparent;
   }
 
   .hamburger .item {
-    background-color: #ffffff !important;
+    background-color: #005629 !important;
   }
 
   .waitListButton > a {
