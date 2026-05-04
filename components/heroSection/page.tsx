@@ -35,7 +35,6 @@ const HeroSection = () => {
     setLoading(true);
 
     try {
-      // Use a timeout to assume success after sending
       const fetchPromise = fetch(GOOGLE_SCRIPT_URL, {
         method: "POST",
         mode: "no-cors",
@@ -48,15 +47,11 @@ const HeroSection = () => {
         }).toString(),
       });
 
-      // Wait for fetch to complete (CORB error is expected and OK)
       await fetchPromise;
 
-      // If we get here without throwing, assume success
       showToast("success", "🎉 You're on the waitlist!");
       setEmail("");
     } catch (error) {
-      // Even with errors, data might have been saved due to no-cors
-      // So we show a softer message
       console.log("Fetch completed (CORB is normal):", error);
       showToast("success", "🎉 You're on the waitlist!");
       setEmail("");
@@ -67,6 +62,20 @@ const HeroSection = () => {
 
   return (
     <div className={styles.container} id="waitlistForm">
+      {/* GLOWING PINGS */}
+      <div className={`${styles.ping} ${styles.ping1}`}>
+        <div className={styles.pingDot} />
+      </div>
+      <div className={`${styles.ping} ${styles.ping2}`}>
+        <div className={styles.pingDot} />
+      </div>
+      <div className={`${styles.ping} ${styles.ping3}`}>
+        <div className={styles.pingDot} />
+      </div>
+      <div className={`${styles.ping} ${styles.ping4}`}>
+        <div className={styles.pingDot} />
+      </div>
+
       {/* Toast Notification */}
       {toast.show && (
         <div className={styles.toastContainer}>
@@ -119,11 +128,7 @@ const HeroSection = () => {
         {/* HERO TEXT */}
         <div className={styles.mainText}>
           <button>COMING JUNE 11, 2026</button>
-          <h1>
-            Experience Every Place Like You&apos;ve Always Known It.
-            {/* <span className={styles.italics}>Story</span>. We Help{" "}
-            <span className={styles.italics}>You</span> Hear It. */}
-          </h1>
+          <h1>Experience Every Place Like You&apos;ve Always Known It.</h1>
           <p>
             The neighbourhoods locals love. The stories no guidebook tells. The
             <span className={styles.italics}>
