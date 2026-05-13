@@ -184,7 +184,7 @@ const HeroSection = () => {
           </div>
           <div className={styles.othersText}>
             <p>
-              <em>Join over 2,400 early explorers</em>
+              <em>Join over 2400 explorers and Investors</em>
             </p>
           </div>
         </div>
