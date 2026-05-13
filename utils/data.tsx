@@ -44,25 +44,25 @@ export const data2 = [
 
 export const howitworks = [
   {
-    image: "/assets/newFrame1.png",
+    image: "/assets/geotella-1.png",
     title: "Open the map",
     texts:
       "Pick any city and step inside it. Every pin is a verified geo-story from someone who knows that place from the inside.",
   },
   {
-    image: "/assets/newFrame2.png",
+    image: "/assets/geotella-2.png",
     title: "Tell us what draws you.",
     texts:
       "History. Culture. Food. Real estate. Set your interests once. GeoTela builds your immersive experience around what you actually came to find.",
   },
   {
-    image: "/assets/newFrame3.png",
+    image: "/assets/geotella-3.png",
     title: "Experience what the surface never shows.",
     texts:
       "Neighbourhood context. Local history. Cultural stories. Investment signals. Every insight confirmed by three independent contributors before it reaches you.",
   },
   {
-    image: "/assets/newFrame4.png",
+    image: "/assets/geotella-4.png",
     title: "Go deeper. Add your own layer.",
     texts:
       "Earn XP. Complete challenges. Or submit an insight of your own. It goes live when two more contributors confirm it. Your experience. Your name on the card.",

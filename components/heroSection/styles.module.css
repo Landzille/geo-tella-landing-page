@@ -118,6 +118,38 @@
   cursor: pointer;
 }
 
+.others {
+  margin-top: 12px;
+  display: flex;
+  gap: 11px;
+  align-items: center;
+  justify-content: center;
+}
+
+.otherImages {
+  display: flex;
+  margin-left: -12px;
+}
+
+.otherImages img {
+  width: 44px;
+  height: 44px;
+  border-radius: 100%;
+  margin-left: -12px;
+}
+
+.otherImages img:first-child {
+  margin-left: 0px;
+}
+
+.otherTexts > p {
+  font-weight: 400;
+  font-family: "plus jakarta sans", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #1c2939;
+  font-style: italic;
+}
 /* ── HERO TEXT ── */
 .mainText {
   max-width: 1000px;
@@ -209,7 +241,7 @@
 /* ── HERO IMAGE ── */
 .heroImage {
   display: flex;
-  padding-top: 103px;
+  padding-top: 34px;
   align-items: center;
   width: 50%;
   margin: 0px auto;

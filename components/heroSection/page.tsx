@@ -158,6 +158,36 @@ const HeroSection = () => {
             {loading ? "Submitting..." : "Get Early Access — Free"}
           </button>
         </div>
+        <div className={styles.others}>
+          <div className={styles.otherImages}>
+            <Image
+              src="/assets/user-1.png"
+              alt="others"
+              width={400}
+              height={400}
+              priority
+            />
+            <Image
+              src="/assets/user-2.png"
+              alt="others"
+              width={400}
+              height={400}
+              priority
+            />
+            <Image
+              src="/assets/user-3.png"
+              alt="others"
+              width={400}
+              height={400}
+              priority
+            />
+          </div>
+          <div className={styles.othersText}>
+            <p>
+              <em>Join over 2,400 early explorers</em>
+            </p>
+          </div>
+        </div>
 
         {/* HERO IMAGES */}
         <Image
