@@ -191,7 +191,7 @@ const HeroSection = () => {
 
         {/* HERO IMAGES */}
         <Image
-          src="/assets/hero.png"
+          src="/assets/geotella-hero.png"
           alt="hero"
           width={800}
           height={800}
