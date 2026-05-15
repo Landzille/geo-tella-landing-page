@@ -4,12 +4,7 @@ export default function VerificationBand() {
   return (
     <section className={styles.band}>
       <div className={styles.inner}>
-        <div className={styles.marksRow}>
-          <span className={styles.mark} />
-          <span className={styles.mark} />
-          <span className={styles.mark} />
-          <span className={styles.markLabel}>3 independent contributors</span>
-        </div>
+        <button>OUR VERIFICATION PROMISE</button>
 
         <p className={styles.lineOne}>
           Not curated by an algorithm.
@@ -18,9 +13,10 @@ export default function VerificationBand() {
         </p>
 
         <p className={styles.lineTwo}>
-          Every experience on GeoTela is confirmed by{" "}
-          <em className={styles.accent}>three independent contributors</em>{" "}
-          before it reaches you.
+          GeoTela isn’t just about getEvery experience on GeoTela is confirmed
+          by three independent contributors before it reaches you from A → B.
+          It’s about making every step meaningful
+          <em className={styles.accent}> making every step meaningful.</em>
         </p>
 
         <p className={styles.lineThree}>Wild concept. We know.</p>

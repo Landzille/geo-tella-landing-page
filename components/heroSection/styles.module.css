@@ -489,4 +489,8 @@
   .waitListButton > a {
     display: none;
   }
+
+  .others {
+    flex-direction: column;
+  }
 }

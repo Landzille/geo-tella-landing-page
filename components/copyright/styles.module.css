@@ -1,21 +1,14 @@
 .container {
-  background: linear-gradient(
-      360deg,
-      rgba(247, 249, 247, 0) -4.08%,
-      #f7f9f7 90.7%
-    ),
-    url("../../public/assets/map.png");
+  background: linear-gradient(180deg, #1a1a18 0%, rgba(26, 26, 24, 0) 100%),
+    url("../../public/assets/footerMap.png") center / cover no-repeat;
   background-position: center;
-  background-size: contain;
-  background: url("../../public/assets/map.png");
-  background-position: center;
-  background-size: cover;
   background-repeat: no-repeat;
 }
 
 .container > p {
   padding: 100px 0px 40px 0px;
   text-align: center;
+  color: #818180;
 }
 
 @media (max-width: 768px) {

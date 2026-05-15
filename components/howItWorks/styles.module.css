@@ -5,9 +5,8 @@
 
 .content {
   display: grid;
-  grid-template-columns: 2fr 2fr;
+  grid-template-columns: 2fr 2fr 2fr 2fr;
   gap: 16px;
-  align-items: center;
 }
 
 .header {
@@ -21,7 +20,7 @@
 }
 
 .header > button {
-  border: 1px solid #00bd7d;
+  border: 1px solid #005629;
   padding: 6px 16px;
   background: #8ace420a;
   border-radius: 100px;
@@ -29,7 +28,7 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 100%;
-  color: #00bd7d;
+  color: #005629;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,19 +43,15 @@
   color: #000000;
 }
 
-.card {
-  padding: 24px;
-}
-
 .card > img {
   width: 100%;
   height: auto;
-  border-radius: 24px;
+  border-radius: 12px;
 }
 
 .card > h3 {
   font-weight: 600;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 100%;
   letter-spacing: 0%;
   padding-top: 34px;

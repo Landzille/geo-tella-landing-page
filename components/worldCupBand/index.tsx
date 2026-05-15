@@ -31,8 +31,8 @@ export default function WorldCupBand() {
 
         {/* Headline stats */}
         <h2 className={styles.stats}>
-          <span className={styles.statLine}>1.2 million visitors.</span>
-          <span className={styles.statLine}>16 cities.</span>
+          <span className={styles.statLine}>1.2M</span>
+          <span className={styles.statLine2}>Visitors. 16 Cities.</span>
           <span className={`${styles.statLine} ${styles.statAccent}`}>
             One launch.
           </span>

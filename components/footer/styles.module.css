@@ -1,5 +1,6 @@
 .container {
   padding: 120px 80px 40px 80px;
+  background-color: #1a1a18;
 }
 
 .contain {
@@ -13,10 +14,17 @@
   gap: 24px;
 }
 
+.IconLists > a {
+  text-decoration: none;
+}
+
 .colOne > p {
   font-weight: 500;
   font-style: Medium;
   font-size: 16px;
+  max-width: 400px;
+  line-height: 1.7 !important;
+  color: #ffffffcc;
   line-height: 100%;
 }
 
@@ -24,6 +32,7 @@
   font-weight: 600;
   font-size: 24px;
   line-height: 100%;
+  color: #818180;
   letter-spacing: 0%;
   padding-bottom: 12px;
 }
@@ -32,7 +41,7 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 28px;
-  color: #000000cc;
+  color: #818180;
   width: 590px;
 }
 

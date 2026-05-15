@@ -1,20 +1,15 @@
 .container {
   padding: 120px 80px;
-}
-
-.content {
   background: linear-gradient(
     to bottom,
-    #00bd7d 80%,
+    #007e33 60%,
 
-    #f6ede4 100%
+    #f6ede4 120%
   );
-  padding: 127px 0px;
-  border-radius: 32px;
 }
 
 .textContent {
-  width: 790px;
+  max-width: 600px;
   margin: 0px auto;
   display: flex;
   flex-direction: column;

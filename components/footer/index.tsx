@@ -11,7 +11,10 @@ const Footer = () => {
       <div className={styles.contain}>
         <div className={styles.colOne}>
           <Image src="/assets/Logo.png" width={182} height={48} alt="logo2" />
-          <p>Experience every place like you&apos;ve always known it.</p>
+          <p>
+            The storytelling navigation app. Experience every place like
+            you&apos;ve always known it.
+          </p>
           <div className={styles.IconLists}>
             <Link
               href="https://www.instagram.com/geotela1?igsh=MThoZWtxaWJwYWJ4Zw=="

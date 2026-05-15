@@ -1,25 +1,35 @@
 import React from "react";
 import styles from "./styles.module.css";
+import { whatGeotella } from "@/utils/data";
 
 const About = () => {
   return (
     <div className={styles.content}>
       <div className={styles.colOne}>
-        <h2>Meet Geotela The Storytelling Navigation App</h2>
-      </div>
-      <div className={styles.colTwo}>
+        <button>WHAT IS GEOTELLA</button>
+        <h2>
+          Meet Geotela The Storytelling{" "}
+          <span className={styles.emSpan}>Navigation App</span>
+        </h2>
         <p>
           GeoTela puts you inside a place, not just on top of it. The hidden
-          neighbourhood.
+          neighbourhood. The story the city has been keeping. The verified
+          ground-truth experience of any location, unlocked before you take a
+          single step.
           <br />
-          The story the city has been keeping. The verified ground-truth
-          experience of any location, unlocked before you take a single step.
+          <br />
+          Think Maps. Think Culture and History. Think experiencing every place
+          like someone who has always known it.
         </p>
-        <div className={styles.otherText}>
-          <p>
-            Think Maps. Think Culture and History. Think experiencing every
-            place like someone who has always known it.
-          </p>
+      </div>
+      <div className={styles.colTwo}>
+        <div className={styles.boxContainer}>
+          {whatGeotella.map((item, index) => (
+            <div key={index} className={styles.box}>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>

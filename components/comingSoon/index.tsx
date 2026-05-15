@@ -11,7 +11,7 @@ const ComingSoon = () => {
           <h2>
             Every place has more in it than anyone showed you.
             <br />
-            <span>Stop visiting. Start experiencing.</span>
+            Stop visiting. Start experiencing.
           </h2>
           <Link href="#waitlistForm">Get Early Access — Free</Link>
         </div>

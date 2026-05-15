@@ -1,44 +1,44 @@
 .container {
-  background: #1c2939;
+  background: #fbf5ea;
   padding: 120px 80px;
 }
 
-.header > button {
+.textFlex > button {
   padding: 6px 16px;
   background: #8ace420a;
-  border: 1px solid #00bd7d;
+  border: 1px solid #ff78001a;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 400;
   font-size: 12px;
-  color: #00bd7d;
+  color: #ff7800;
   line-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   border-radius: 100px;
 }
 
 .textFlex {
   display: flex;
+  flex-direction: column;
+  gap: 12px;
   align-items: center;
   justify-content: space-between;
 }
 
 .textFlex > h2 {
-  padding-top: 15px;
   font-weight: 600;
   font-size: 48px;
   line-height: 72px;
-  color: #ffffff;
+  color: #000000;
 }
-
-.textFlex span {
-  color: #00bd7d;
-}
-
 .textFlex p {
-  width: 350px;
+  text-align: center;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
-  color: #ffffff;
+  color: #000000b2;
 }
 
 .others {
@@ -55,7 +55,7 @@
 }
 
 .gridItem {
-  background: #f6ede4;
+  background: #ffffff;
   padding: 24px;
   border-radius: 24px;
   display: flex;
@@ -66,14 +66,14 @@
 
 .otherTexts > h3 {
   font-weight: 600;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 100%;
-  color: #d43201;
+  color: #000000;
   padding-bottom: 12px;
 }
 
 .otherTexts > p {
-  color: #333232;
+  color: #000000b2;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;

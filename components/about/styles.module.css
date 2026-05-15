@@ -3,7 +3,23 @@
   display: grid;
   align-items: center;
   grid-template-columns: 2fr 2fr;
-  background: #f8fafc;
+  background: #ffffff;
+}
+
+.colOne > button {
+  border: 1px solid #005629;
+  padding: 6px 16px;
+  background: #8ace420a;
+  border-radius: 100px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  color: #005629;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .colOne > h2 {
@@ -11,6 +27,19 @@
   font-size: 48px;
   line-height: 72px;
   width: 380px;
+}
+
+.emSpan {
+  color: #ff7800;
+}
+
+.colOne > p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  max-width: 580px;
+  padding-top: 20px;
+  color: #000000;
 }
 
 .colTwo > p {
@@ -24,6 +53,23 @@
   font-family: "Source Serif 4", sans-serif;
   color: #f3a220;
   font-style: italic;
+}
+
+.boxContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  padding-top: 48px;
+}
+
+.box {
+  background-color: #fbf5ea;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid #00562966;
 }
 
 .otherText > p {

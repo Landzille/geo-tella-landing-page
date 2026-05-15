@@ -5,8 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { X, CheckCircle, AlertCircle } from "lucide-react";
 
-const GOOGLE_SCRIPT_URL = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL || "";
-
 const HeroSection = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [email, setEmail] = useState("");
@@ -26,35 +24,23 @@ const HeroSection = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
-    if (!GOOGLE_SCRIPT_URL) {
-      showToast("error", "Configuration error. Please contact support.");
-      return;
-    }
+    if (!email) return;
 
     setLoading(true);
 
     try {
-      const fetchPromise = fetch(GOOGLE_SCRIPT_URL, {
+      const res = await fetch("/api/subscribe", {
         method: "POST",
-        mode: "no-cors",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: new URLSearchParams({
-          email,
-          timestamp: new Date().toISOString(),
-        }).toString(),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, listId: 9 }),
       });
 
-      await fetchPromise;
+      if (!res.ok) throw new Error("Failed");
 
       showToast("success", "🎉 You're on the waitlist!");
       setEmail("");
-    } catch (error) {
-      console.log("Fetch completed (CORB is normal):", error);
-      showToast("success", "🎉 You're on the waitlist!");
-      setEmail("");
+    } catch {
+      showToast("error", "Something went wrong. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -62,21 +48,6 @@ const HeroSection = () => {
 
   return (
     <div className={styles.container} id="waitlistForm">
-      {/* GLOWING PINGS */}
-      <div className={`${styles.ping} ${styles.ping1}`}>
-        <div className={styles.pingDot} />
-      </div>
-      <div className={`${styles.ping} ${styles.ping2}`}>
-        <div className={styles.pingDot} />
-      </div>
-      <div className={`${styles.ping} ${styles.ping3}`}>
-        <div className={styles.pingDot} />
-      </div>
-      <div className={`${styles.ping} ${styles.ping4}`}>
-        <div className={styles.pingDot} />
-      </div>
-
-      {/* Toast Notification */}
       {toast.show && (
         <div className={styles.toastContainer}>
           <div
@@ -101,7 +72,6 @@ const HeroSection = () => {
       )}
 
       <div className={styles.content}>
-        {/* HEADER */}
         <div className={styles.header}>
           <Image
             src="/assets/Logo.png"
@@ -110,10 +80,8 @@ const HeroSection = () => {
             height={48}
             priority
           />
-
           <div className={styles.waitListButton}>
             <Link href="#waitlist">Get Early Access — Free</Link>
-
             <button
               onClick={() => setIsMenuOpen(true)}
               className={styles.hamburger}
@@ -125,7 +93,6 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* HERO TEXT */}
         <div className={styles.mainText}>
           <button>COMING JUNE 11, 2026</button>
           <h1>Experience Every Place Like You&apos;ve Always Known It.</h1>
@@ -139,7 +106,6 @@ const HeroSection = () => {
           </p>
         </div>
 
-        {/* WAITLIST FORM */}
         <div id="waitlist" className={styles.form}>
           <input
             type="email"
@@ -149,7 +115,6 @@ const HeroSection = () => {
             required
             onChange={(e) => setEmail(e.target.value)}
           />
-
           <button
             onClick={handleSubmit}
             disabled={loading}
@@ -158,6 +123,7 @@ const HeroSection = () => {
             {loading ? "Submitting..." : "Get Early Access — Free"}
           </button>
         </div>
+
         <div className={styles.others}>
           <div className={styles.otherImages}>
             <Image
@@ -189,7 +155,6 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* HERO IMAGES */}
         <Image
           src="/assets/geotella-hero.png"
           alt="hero"
@@ -200,7 +165,6 @@ const HeroSection = () => {
         />
       </div>
 
-      {/* MOBILE MENU */}
       {isMenuOpen && (
         <div className={styles.mobileMenuOverlay}>
           <div className={styles.mobileMenuHeader}>
@@ -211,7 +175,6 @@ const HeroSection = () => {
               height={48}
               priority
             />
-
             <button
               onClick={() => setIsMenuOpen(false)}
               className={styles.closeButton}
@@ -219,7 +182,6 @@ const HeroSection = () => {
               <X size={32} strokeWidth={2} />
             </button>
           </div>
-
           <div className={styles.mobileMenuContent}>
             <Link
               href="#waitlist"

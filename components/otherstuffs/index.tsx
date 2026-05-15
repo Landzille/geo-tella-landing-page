@@ -6,15 +6,12 @@ const OtherStuffs = () => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <button>OUR UNIQUENESS</button>
         <div className={styles.textFlex}>
+          <button>OUR UNIQUENESS</button>
           <h2>
             What Makes <span>Geotela</span> Unique
           </h2>
-          <p>
-            Every place has more in it
-            <span className={styles.others}> than anyone showed you</span>
-          </p>
+          <p>Every place has more in it than anyone showed you</p>
         </div>
       </div>
       <div className={styles.grid}>

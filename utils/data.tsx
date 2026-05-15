@@ -29,13 +29,13 @@ export const data = [
 
 export const data2 = [
   {
-    image: "/assets/frame5.png",
+    image: "/assets/4.png",
     title: "For anyone who has ever felt a place was holding out on them.",
     texts:
       "GeoTela works whether you are discovering a new city, researching a market, or finally experiencing the neighbourhood you pass every single day.",
   },
   {
-    image: "/assets/frame4.png",
+    image: "/assets/5.png",
     title: "Discover Your City or a New One",
     texts:
       "You don’t need to travel far. Geotela helps you fall in love with the places you pass every day.",
@@ -96,9 +96,6 @@ export const otherItems = [
     title: "Travelers and Tourists",
     text: "Learn the history of every place you visit.",
   },
-];
-
-export const otherItems2 = [
   {
     icon: <Student />,
     title: "Students and Young Learners",
@@ -110,13 +107,28 @@ export const otherItems2 = [
     text: "Transform routine routes into micro-adventures",
   },
   {
-    icon: <Culture />,
+    icon: <Student />,
     title: "Solo Explorers and Culture Lovers",
     text: "Experience cities deeply, not passively",
   },
   {
-    icon: <Travellers />,
+    icon: <Culture />,
     title: "Investors and Market Researchers",
     text: "Ground-truth intelligence on frontier markets. Infrastructure signals. Growth corridors. Community-verified data on the cities and markets behind your next decision. Experience the market before you commit to it.",
+  },
+];
+
+export const whatGeotella = [
+  {
+    title: "Geo-Stories unlocked in real time",
+    text: "Every landmark, neighbourhood, and hidden gem narrated by those who actually live there.",
+  },
+  {
+    title: "Verified by three contributors",
+    text: "Not a rating. Not a review. A ground-truth story confirmed by three independent locals before it reaches you.",
+  },
+  {
+    title: "XP, quests and badges",
+    text: "The further you go, the richer it gets. Exploration that compounds with every step.",
   },
 ];
