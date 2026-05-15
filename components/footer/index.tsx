@@ -17,13 +17,16 @@ const Footer = () => {
           </p>
           <div className={styles.IconLists}>
             <Link
-              href="https://www.instagram.com/geotela1?igsh=MThoZWtxaWJwYWJ4Zw=="
+              href="https://www.instagram.com/usegeotela?igsh=MThoZWtxaWJwYWJ4Zw=="
               target="_blank"
             >
               {" "}
               <Instagram />{" "}
             </Link>
-            <Link href="https://tiktok.com/@geotelaapp" target="_blank">
+            <Link
+              href="https://www.tiktok.com/@usegeotela?_r=1&_t=ZS-96Nd4adKLSS"
+              target="_blank"
+            >
               {" "}
               <Tiktok />
             </Link>
