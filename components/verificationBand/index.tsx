@@ -15,7 +15,7 @@ export default function VerificationBand() {
         <p className={styles.lineTwo}>
           GeoTela isn’t just about getEvery experience on GeoTela is confirmed
           by three independent contributors before it reaches you from A → B.
-          It’s about making every step meaningful
+          It’s about
           <em className={styles.accent}> making every step meaningful.</em>
         </p>
 

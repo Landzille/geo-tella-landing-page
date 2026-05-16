@@ -1,8 +1,11 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import styles from "./styles.module.css";
 import { whatGeotella } from "@/utils/data";
+import InvestorModal from "../formModal";
 
 const About = () => {
+  const [modalOpen, setModalOpen] = useState(false);
   return (
     <div className={styles.content}>
       <div className={styles.colOne}>
@@ -21,6 +24,9 @@ const About = () => {
           Think Maps. Think Culture and History. Think experiencing every place
           like someone who has always known it.
         </p>
+        <button className={styles.cta} onClick={() => setModalOpen(true)}>
+          Request Founding Investor Access
+        </button>
       </div>
       <div className={styles.colTwo}>
         <div className={styles.boxContainer}>
@@ -32,6 +38,7 @@ const About = () => {
           ))}
         </div>
       </div>
+      {modalOpen && <InvestorModal onClose={() => setModalOpen(false)} />}
     </div>
   );
 };

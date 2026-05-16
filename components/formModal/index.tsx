@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import styles from "./styles.module.css";
+import Image from "next/image";
 
 interface InvestorModalProps {
   onClose: () => void;
@@ -116,11 +117,16 @@ export default function InvestorModal({ onClose }: InvestorModalProps) {
             )}
           </div>
 
-          {/* <div className={styles.right}>
+          <div className={styles.right}>
             <div className={styles.pdfMockup}>
-              <span>PDF MOCKUP WILL BE HERE</span>
+              <Image
+                src="/assets/mockup.png"
+                width={1000}
+                height={1000}
+                alt="mockup image"
+              />
             </div>
-          </div> */}
+          </div>
         </div>
       </div>
     </div>

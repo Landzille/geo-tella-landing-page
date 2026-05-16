@@ -45,48 +45,43 @@ export const data2 = [
 export const howitworks = [
   {
     image: "/assets/geotella-1.png",
-    title: "Open the map",
-    texts:
-      "Pick any city and step inside it. Every pin is a verified geo-story from someone who knows that place from the inside.",
+    title: "Choose a City and Start Exploring",
+    texts: "Pick your location and let Geotela guide your discovery.",
   },
   {
     image: "/assets/geotella-2.png",
-    title: "Tell us what draws you.",
-    texts:
-      "History. Culture. Food. Real estate. Set your interests once. GeoTela builds your immersive experience around what you actually came to find.",
+    title: "Move Around the World in your style",
+    texts: "Walk, drive, or cycle. Your stories update as you go.",
   },
   {
     image: "/assets/geotella-3.png",
-    title: "Experience what the surface never shows.",
+    title: "Unlock Stories Within your Location",
     texts:
-      "Neighbourhood context. Local history. Cultural stories. Investment signals. Every insight confirmed by three independent contributors before it reaches you.",
+      "Discover short, engaging bites of history, culture, myths, and local secrets.",
   },
   {
     image: "/assets/geotella-4.png",
-    title: "Go deeper. Add your own layer.",
+    title: "Play, Learn and Level Up",
     texts:
-      "Earn XP. Complete challenges. Or submit an insight of your own. It goes live when two more contributors confirm it. Your experience. Your name on the card.",
+      "Earn points for every story you unlock, complete challenges, and maintain  your streaks.",
   },
 ];
 
 export const otherList = [
   {
     image: <Navigation />,
-    title: "Immersive by design",
-    texts:
-      "Direction meets verified community intelligence. Every step unlocks a layer of the place most visitors never reach.",
+    title: "Navigation + Storytelling",
+    texts: "Direction meets history and culture.",
   },
   {
     image: <Gamified />,
-    title: "Exploration that compounds",
-    texts:
-      "XP, badges, and challenges that deepen the further you go. The more you experience the richer every city becomes.",
+    title: "Gamified Learning",
+    texts: "XP, badges, and challenges make exploration addictive.",
   },
   {
     image: <Globe />,
-    title: "Built around what moves you",
-    texts:
-      "Tag your interests. GeoTela builds your immersive map around them. Not around what is popular. Around what draws you specifically.",
+    title: "Personalized Travel",
+    texts: "Quests and stories tailored to your interests.",
   },
 ];
 

@@ -45,6 +45,16 @@
   width: 590px;
 }
 
+.colTwo > a {
+  background-color: #ffffff;
+  color: #262424;
+  padding: 14px 32px;
+  border-radius: 100px;
+  margin-top: 40px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 80px 12px 80px 12px;

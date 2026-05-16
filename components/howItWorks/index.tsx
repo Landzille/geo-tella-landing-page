@@ -6,7 +6,7 @@ const HowitWorks = () => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <button>HOW IT WORKS</button>
+        <button>WHY GEOTELA</button>
         <h2>From the Map to the Experience You Actually Came For.</h2>
       </div>
       <div className={styles.content}>

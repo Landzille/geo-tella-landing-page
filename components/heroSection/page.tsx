@@ -120,7 +120,7 @@ const HeroSection = () => {
             disabled={loading}
             className={loading ? styles.buttonLoading : ""}
           >
-            {loading ? "Submitting..." : "Get Early Access — Free"}
+            {loading ? "Submitting..." : "Claim founding Access"}
           </button>
         </div>
 

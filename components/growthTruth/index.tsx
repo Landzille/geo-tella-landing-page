@@ -33,17 +33,15 @@ export default function GroundTruth() {
     <>
       <section className={styles.section}>
         <div className={styles.left}>
-          <span className={styles.badge}>WHAT IS GEOTELA</span>
+          <span className={styles.badge}>Investor Access</span>
           <h1 className={styles.heading}>
             Ground-Truth Intelligence on Frontier Markets.
           </h1>
           <p className={styles.body}>
-            Geotela isn&apos;t just a navigation app. It is a living,
-            community-verified intelligence layer on cities, corridors, and
-            markets most platforms have never mapped. Infrastructure signals.
-            Growth corridors. Community-verified data on the cities and markets
-            behind your next decision. Experience the market before you commit
-            to it.
+            The World Cup creates a six-week period where short-let demand, foot
+            traffic, and infrastructure stress are all moving at once.
+            Geotela&apos;s contributor network captures every signal — verified,
+            timestamped, and surfaced to founding investors first.
           </p>
           <button className={styles.cta} onClick={() => setModalOpen(true)}>
             Request Founding Investor Access

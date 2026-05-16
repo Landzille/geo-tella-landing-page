@@ -43,7 +43,8 @@
 }
 
 .inner {
-  display: flex;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   gap: 40px;
   align-items: center;
 }
@@ -129,20 +130,12 @@
   width: 280px;
 }
 
-.pdfMockup {
-  background-color: #2e7d4f;
-  border-radius: 12px;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 24px;
-  color: #fff;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 1.4;
-  letter-spacing: 0.02em;
+.pdfMockup > img {
+  display: block;
+  width: 100%;
+  height: 400;
+  border-radius: 24px;
+  object-fit: cover;
 }
 
 .successState {
@@ -153,11 +146,14 @@
 
 @media (max-width: 640px) {
   .inner {
-    flex-direction: column;
+    display: block;
   }
 
   .right {
     width: 100%;
+  }
+  .pdfMockup > img {
+    display: none;
   }
 }
 
@@ -167,7 +163,6 @@
   font-weight: 500;
   padding: 16px 0;
 }
-
 .errorMsg {
   font-size: 13px;
   color: #c0392b;

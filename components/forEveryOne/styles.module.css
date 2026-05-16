@@ -1,0 +1,223 @@
+.section {
+  padding: 80px;
+  background-color: #fff;
+}
+
+.header {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 40px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.textHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.badge {
+  display: inline-block;
+  border: 1px solid #2e7d4f;
+  color: #2e7d4f;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  padding: 5px 14px;
+  border-radius: 999px;
+  width: fit-content;
+}
+
+.heading {
+  font-size: 42px;
+  font-weight: 700;
+  color: #111;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.subheading {
+  font-size: 42px;
+  font-weight: 700;
+  font-style: italic;
+  color: #2e7d4f;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* LIGHT CARD */
+.cardLight {
+  background-color: #fbf5ea;
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.iconBox {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2e7d4f;
+}
+
+.cardMain {
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.cardTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 8px;
+}
+
+.cardDesc {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* DARK CARD */
+.cardDark {
+  background-color: #006a2f;
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.iconBoxDark {
+  width: 48px;
+  height: 48px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.cardTitleDark {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 8px;
+}
+
+.cardDescDark {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* LISTS */
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-radius: 8px;
+  padding: 8px 16px;
+}
+
+.listItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.listItem:last-child {
+  border-bottom: none;
+}
+
+.listItemDark {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.listItemDark:last-child {
+  border-bottom: none;
+}
+
+.bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #111;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.bulletDark {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.listTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+  margin: 0 0 2px;
+}
+
+.listDesc {
+  font-size: 13px;
+  color: #666;
+  margin: 0;
+}
+
+.listTitleDark {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 2px;
+}
+
+.listDescDark {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 48px 24px;
+  }
+
+  .heading,
+  .subheading {
+    font-size: 28px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -90,6 +90,19 @@
   color: #000000;
 }
 
+.colOne > .cta {
+  background-color: #ff7800;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 18px;
+  transition: background-color 0.2s ease;
+}
+
 @media (max-width: 789px) {
   .content {
     grid-template-columns: 2fr;

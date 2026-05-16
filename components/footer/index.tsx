@@ -45,6 +45,11 @@ const Footer = () => {
             Get early access drops, verified intelligence, and the stories worth
             knowing before you arrive.
           </p>
+          <br />
+          <br />
+          <Link href="https://whatsapp.com/channel/0029VbC7a4O0LKZC3ldxkn1s">
+            Join Commmunity
+          </Link>
         </div>
       </div>
     </div>
