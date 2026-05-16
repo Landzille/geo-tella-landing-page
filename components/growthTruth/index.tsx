@@ -44,7 +44,7 @@ export default function GroundTruth() {
             timestamped, and surfaced to founding investors first.
           </p>
           <button className={styles.cta} onClick={() => setModalOpen(true)}>
-            Request Founding Investor Access
+            Download Investors Starter Pack
           </button>
         </div>
 
