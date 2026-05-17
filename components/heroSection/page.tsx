@@ -74,7 +74,7 @@ const HeroSection = () => {
       <div className={styles.content}>
         <div className={styles.header}>
           <Image
-            src="/assets/Logo.png"
+            src="/assets/geo-new.png"
             alt="logo"
             width={100}
             height={48}

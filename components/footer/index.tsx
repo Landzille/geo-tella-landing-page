@@ -10,7 +10,12 @@ const Footer = () => {
     <div className={styles.container}>
       <div className={styles.contain}>
         <div className={styles.colOne}>
-          <Image src="/assets/Logo.png" width={182} height={48} alt="logo2" />
+          <Image
+            src="/assets/geo-dark.png"
+            width={182}
+            height={48}
+            alt="logo2"
+          />
           <p>
             The storytelling navigation app. Experience every place like
             you&apos;ve always known it.

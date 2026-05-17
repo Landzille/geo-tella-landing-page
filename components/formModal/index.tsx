@@ -111,7 +111,7 @@ export default function InvestorModal({ onClose }: InvestorModalProps) {
                 >
                   {status === "loading"
                     ? "Submitting..."
-                    : "Get Investors Starter Pack"}
+                    : "Download Investors Starter Pack"}
                 </button>
               </>
             )}
