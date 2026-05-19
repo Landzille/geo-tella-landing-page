@@ -9,7 +9,7 @@ const About = () => {
   return (
     <div className={styles.content}>
       <div className={styles.colOne}>
-        <button>WHAT IS GEOTELLA</button>
+        <button>WHAT IS GEOTELA</button>
         <h2>
           Meet Geotela The Storytelling{" "}
           <span className={styles.emSpan}>Navigation App</span>
