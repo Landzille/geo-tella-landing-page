@@ -3,12 +3,14 @@
 import { useState } from "react";
 import styles from "./styles.module.css";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 interface InvestorModalProps {
   onClose: () => void;
 }
 
 export default function InvestorModal({ onClose }: InvestorModalProps) {
+  const router = useRouter();
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<
@@ -29,6 +31,12 @@ export default function InvestorModal({ onClose }: InvestorModalProps) {
 
       if (!res.ok) throw new Error("Failed");
       setStatus("success");
+
+      setTimeout(() => {
+        handleDownload();
+        onClose();
+        router.push("/");
+      }, 2000);
     } catch {
       setStatus("error");
     }
