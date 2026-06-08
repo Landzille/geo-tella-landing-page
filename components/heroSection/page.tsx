@@ -94,7 +94,7 @@ const HeroSection = () => {
         </div>
 
         <div className={styles.mainText}>
-          <button>COMING JUNE 11, 2026</button>
+          <button>COMING JUNE, 2026</button>
           <h1>Experience Every Place Like You&apos;ve Always Known It.</h1>
           <p>
             The neighbourhoods locals love. The stories no guidebook tells. The
