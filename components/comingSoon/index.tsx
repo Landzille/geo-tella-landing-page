@@ -13,7 +13,7 @@ const ComingSoon = () => {
             <br />
             Stop visiting. Start experiencing.
           </h2>
-          <Link href="#waitlistForm">Get Early Access — Free</Link>
+          <Link href="/#waitlistForm">Get Early Access — Free</Link>
         </div>
       </div>
     </div>
