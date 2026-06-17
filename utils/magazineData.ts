@@ -9,15 +9,15 @@ export interface Magazine {
 export const magazineData: Magazine[] = [
     {
         id: 1,
-        title: "See the World Differently",
-        description: "A geotela discovery guide",
+        title: "Geotela Magazine Vol. 1",
+        description: "See the World Differently",
         image: "/assets/volume1.jpeg",
         pdfUrl: "/magazines/Geotela-Magazine-Volume-1.pdf",
     },
     {
         id: 2,
-        title: "Your Money Playbook for the World Cup",
-        description: "10 real, specific ways to earn during the biggest sporting event of your lifetime",
+        title: "Geotela Magazine Vol. 2",
+        description: "Your Money Playbook for the World Cup",
         image: "/assets/volume2.jpg",
         pdfUrl: "/magazines/Geotela-Magazine-Volume-2.pdf",
     },
