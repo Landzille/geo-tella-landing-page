@@ -39,6 +39,7 @@
     transform: scale(1);
     opacity: 0.75;
   }
+
   100% {
     transform: scale(3);
     opacity: 0;
@@ -64,9 +65,11 @@
   top: 18%;
   left: 72%;
 }
+
 .ping2::before {
   animation-delay: 1.2s;
 }
+
 .ping2::after {
   animation-delay: 1.8s;
 }
@@ -75,9 +78,11 @@
   top: 62%;
   left: 15%;
 }
+
 .ping3::before {
   animation-delay: 2.1s;
 }
+
 .ping3::after {
   animation-delay: 2.7s;
 }
@@ -86,27 +91,56 @@
   top: 55%;
   left: 80%;
 }
+
 .ping4::before {
   animation-delay: 0.7s;
 }
+
 .ping4::after {
   animation-delay: 1.3s;
 }
 
 /* ── HEADER ── */
 .header {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
   margin: 0px 80px 120px 80px;
   padding-top: 40px;
 }
 
-.header > img {
-  width: 13%;
+.header>img {
+  width: 140px;
   height: auto;
+  justify-self: start;
 }
 
-.waitListButton > a {
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  justify-self: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.nav>a {
+  color: #1c2939;
+  text-decoration: none;
+}
+
+.navActive {
+  color: #005629 !important;
+}
+
+.waitListButton {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.waitListButton>a {
   background-color: #005629;
   padding: 14px 32px;
   border-radius: 100px;
@@ -142,7 +176,7 @@
   margin-left: 0px;
 }
 
-.otherTexts > p {
+.otherTexts>p {
   font-weight: 400;
   font-family: "plus jakarta sans", sans-serif;
   font-size: 14px;
@@ -150,6 +184,7 @@
   color: #1c2939;
   font-style: italic;
 }
+
 /* ── HERO TEXT ── */
 .mainText {
   max-width: 1000px;
@@ -161,7 +196,7 @@
   gap: 24px;
 }
 
-.mainText > button {
+.mainText>button {
   padding: 6px 16px;
   font-weight: 400;
   font-size: 12px;
@@ -175,7 +210,7 @@
   border-radius: 100px;
 }
 
-.mainText > h1 {
+.mainText>h1 {
   font-weight: 600;
   font-size: 72px;
   line-height: 112%;
@@ -188,7 +223,7 @@
   font-style: italic;
 }
 
-.mainText > p {
+.mainText>p {
   font-weight: 400;
   font-size: 16px;
   line-height: 25px;
@@ -212,7 +247,7 @@
   border-radius: 100px;
 }
 
-.form > input {
+.form>input {
   width: 100%;
   padding: 14px 24px;
   border: 0px;
@@ -223,13 +258,13 @@
   font-weight: 400;
 }
 
-.form > input::placeholder {
+.form>input::placeholder {
   color: #005629;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 16px;
 }
 
-.form > button {
+.form>button {
   width: 400px;
   padding: 14px 32px;
   border-radius: 100px;
@@ -279,6 +314,8 @@
   left: 0;
   right: 0;
   bottom: 0;
+  display: flex;
+  flex-direction: column;
   background-color: #fff;
   z-index: 9999;
   animation: slideIn 0.3s ease;
@@ -304,11 +341,24 @@
 }
 
 .mobileMenuContent {
+  flex: 1;
   padding: 24px;
   display: flex;
   flex-direction: column;
-  height: 120px;
-  justify-content: flex-end;
+  justify-content: space-between;
+}
+
+.mobileMenuLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mobileMenuLinks>a {
+  font-weight: 600;
+  font-size: 20px;
+  color: #1c2939;
+  text-decoration: none;
 }
 
 .joinWaitlistButton {
@@ -393,6 +443,7 @@
     transform: translateX(100%);
     opacity: 0;
   }
+
   to {
     transform: translateX(0);
     opacity: 1;
@@ -416,6 +467,7 @@
     top: 12%;
     left: 8%;
   }
+
   .ping2 {
     top: 10%;
     left: 82%;
@@ -431,16 +483,22 @@
   }
 
   .header {
+    grid-template-columns: 1fr auto;
     margin: 0px 0px 80px 0px;
     align-items: center;
+    padding-top: 20px;
   }
 
-  .header > img {
+  .header>img {
     width: 40%;
     height: auto;
   }
 
-  .mainText > h1 {
+  .nav {
+    display: none;
+  }
+
+  .mainText>h1 {
     font-size: 32px;
   }
 
@@ -452,19 +510,19 @@
     gap: 12px;
   }
 
-  .form > input {
+  .form>input {
     max-width: 520px;
     padding: 14px 24px !important;
     display: flex;
     align-items: center;
-    border: 1px solid rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(23, 21, 21, 0.7);
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 100px;
   }
 
-  .form > button {
+  .form>button {
     width: 100%;
   }
 
@@ -486,7 +544,7 @@
     background-color: #005629 !important;
   }
 
-  .waitListButton > a {
+  .waitListButton>a {
     display: none;
   }
 

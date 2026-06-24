@@ -80,6 +80,12 @@ const HeroSection = () => {
             height={48}
             priority
           />
+          <nav className={styles.nav}>
+            <Link href="/" className={styles.navActive}>
+              Home
+            </Link>
+            <Link href="/magazines">Magazines</Link>
+          </nav>
           <div className={styles.waitListButton}>
             <Link href="#waitlist">Get Early Access — Free</Link>
             <button
@@ -183,6 +189,14 @@ const HeroSection = () => {
             </button>
           </div>
           <div className={styles.mobileMenuContent}>
+            <div className={styles.mobileMenuLinks}>
+              <Link href="/" onClick={() => setIsMenuOpen(false)}>
+                Home
+              </Link>
+              <Link href="/magazines" onClick={() => setIsMenuOpen(false)}>
+                Magazines
+              </Link>
+            </div>
             <Link
               href="#waitlist"
               className={styles.joinWaitlistButton}

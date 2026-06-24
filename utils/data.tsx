@@ -9,9 +9,9 @@ import Travellers from "@/svgs/travellers";
 export const data = [
   {
     image: "/assets/frame1.png",
-    title: "The story behind every street.",
+    title: "Geotela Magazine Vol. 1",
     texts:
-      "Move through any city and unlock the immersive intelligence behind landmarks, neighbourhoods, and hidden gems in real time. Not ratings. Verified stories from people who live them.",
+      "The story behind every street.",
   },
   {
     image: "/assets/frame2.png",
