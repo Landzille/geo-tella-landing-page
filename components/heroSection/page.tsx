@@ -37,6 +37,7 @@ const HeroSection = () => {
 
       if (!res.ok) throw new Error("Failed");
 
+      window.gtag?.('event', 'waitlist_signup');
       showToast("success", "🎉 You're on the waitlist!");
       setEmail("");
     } catch {

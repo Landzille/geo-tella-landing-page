@@ -30,6 +30,7 @@ export default function InvestorModal({ onClose }: InvestorModalProps) {
       });
 
       if (!res.ok) throw new Error("Failed");
+      window.gtag?.('event', 'investor_pack_click');
       setStatus("success");
 
       setTimeout(() => {
