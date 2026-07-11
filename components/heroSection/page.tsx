@@ -88,7 +88,7 @@ const HeroSection = () => {
             <Link href="/magazines">Magazines</Link>
           </nav>
           <div className={styles.waitListButton}>
-            <Link href="#waitlist">Get Early Access — Free</Link>
+            <Link href="/waitlist">Get Early Access — Free</Link>
             <button
               onClick={() => setIsMenuOpen(true)}
               className={styles.hamburger}
@@ -199,7 +199,7 @@ const HeroSection = () => {
               </Link>
             </div>
             <Link
-              href="#waitlist"
+              href="/waitlist"
               className={styles.joinWaitlistButton}
               onClick={() => setIsMenuOpen(false)}
             >

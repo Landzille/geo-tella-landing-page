@@ -1,0 +1,254 @@
+/* ── PANEL ── */
+.panel {
+    border-radius: 20px;
+    padding: 40px 36px;
+    width: 100%;
+    /* max-width: 600px; */
+    flex-shrink: 0;
+}
+
+.panelDark {
+    background: #007935;
+}
+
+.panelLight {
+    background: #F8E3C1;
+    box-shadow: 0 4px 32px rgba(28, 41, 57, 0.1);
+}
+
+/* ── FORM HEADER ── */
+.formTitle {
+    margin: 0 0 10px 0;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.panelDark .formTitle {
+    color: #ffffff;
+}
+
+.panelLight .formTitle {
+    color: #1c2939;
+}
+
+.formSubtitle {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.panelDark .formSubtitle {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.panelLight .formSubtitle {
+    color: #475467;
+}
+
+/* ── FORM ── */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 28px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.label {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "plus jakarta sans", sans-serif;
+}
+
+.panelDark .label {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.panelLight .label {
+    color: #1c2939;
+}
+
+.input {
+    padding: 14px 20px;
+    border-radius: 100px;
+    font-size: 15px;
+    outline: none;
+    font-family: "plus jakarta sans", sans-serif;
+    transition: border-color 0.15s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.input[data-theme="dark"] {
+    background: transparent;
+    border: 1px solid #E1E1E166;
+    color: #ffffff;
+}
+
+.input[data-theme="dark"]:focus {
+    border-color: #7ddfb0;
+    background: transparent;
+}
+
+.input[data-theme="light"] {
+    background: transparent;
+    border: 1px solid #6B6B5F66;
+    color: #1c2939;
+}
+
+.input[data-theme="light"]:focus {
+    border-color: #005629;
+}
+
+.input::placeholder {
+    color: #adb5bd;
+}
+
+/* ── CTA BUTTON ── */
+.cta {
+    padding: 16px 24px;
+    background: #FF7800;
+    color: #ffffff;
+    border: none;
+    border-radius: 100px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: "plus jakarta sans", sans-serif;
+    transition: opacity 0.15s, transform 0.15s;
+    text-align: center;
+}
+
+.cta:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.cta:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ── DISCLAIMER ── */
+.disclaimer {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.panelDark .disclaimer {
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.panelLight .disclaimer {
+    color: #475467;
+}
+
+/* ── PERK TAGS ── */
+.perks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.perks>span {
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.perks[data-theme="dark"]>span {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.perks[data-theme="light"]>span {
+    border: 1px solid rgba(28, 41, 57, 0.2);
+    color: #475467;
+}
+
+/* ── ERROR ── */
+.error {
+    margin: 0;
+    font-size: 14px;
+    color: #ef4444;
+}
+
+.panelDark .error {
+    color: #f87171;
+}
+
+/* ── SUCCESS STATE ── */
+.success {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+    padding: 24px 0;
+}
+
+.successTitle {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.panelDark .successTitle {
+    color: #ffffff;
+}
+
+.panelLight .successTitle {
+    color: #1c2939;
+}
+
+.successDesc {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 280px;
+}
+
+.panelDark .successDesc {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.panelLight .successDesc {
+    color: #475467;
+}
+
+.resetBtn {
+    margin-top: 8px;
+    padding: 12px 28px;
+    border-radius: 100px;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: inherit;
+    transition: opacity 0.15s;
+}
+
+.resetBtn:hover {
+    opacity: 0.7;
+}
+
+.resetBtn[data-theme="dark"] {
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.resetBtn[data-theme="light"] {
+    border: 1px solid rgba(28, 41, 57, 0.2);
+    color: #1c2939;
+}

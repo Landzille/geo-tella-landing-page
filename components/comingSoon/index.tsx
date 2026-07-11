@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./styles.module.css";
 import Link from "next/link";
 
@@ -13,7 +12,7 @@ const ComingSoon = () => {
             <br />
             Stop visiting. Start experiencing.
           </h2>
-          <Link href="/#waitlistForm">Get Early Access — Free</Link>
+          <Link href="/waitlist">Get Early Access — Free</Link>
         </div>
       </div>
     </div>

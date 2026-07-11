@@ -7,6 +7,10 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Email is required" }, { status: 400 });
   }
 
+  if (!process.env.BREVO_API_KEY) {
+    return NextResponse.json({ error: "BREVO_API_KEY is not set" }, { status: 500 });
+  }
+
   try {
     const response = await fetch("https://api.brevo.com/v3/contacts", {
       method: "POST",

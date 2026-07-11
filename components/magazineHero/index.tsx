@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "./styles.module.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -28,7 +28,7 @@ const MagazineHeroSection = () => {
                     </nav>
 
                     <div className={styles.waitListButton}>
-                        <Link href="/#waitlist">Get Early Access — Free</Link>
+                        <Link href="/waitlist">Get Early Access — Free</Link>
                         <button
                             onClick={() => setIsMenuOpen(true)}
                             className={styles.hamburger}
