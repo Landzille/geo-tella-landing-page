@@ -36,7 +36,7 @@ const ExplorersPage = () => {
             <WaitlistNav active="explorers" theme="light" />
 
             {/* ── HERO ── */}
-            <section className={styles.hero}>
+            <section className={styles.hero} id="form">
                 <div className={styles.heroLeft}>
                     <span className={styles.badge}>FOR THE INTELLIGENT EXPLORER</span>
                     <h1 className={styles.headline}>

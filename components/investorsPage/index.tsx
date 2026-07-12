@@ -36,7 +36,7 @@ const InvestorsPage = () => {
             <WaitlistNav active="investors" theme="dark" />
 
             {/* ── HERO ── */}
-            <section className={styles.hero}>
+            <section className={styles.hero} id="form">
                 <div className={styles.heroLeft}>
                     <span className={styles.badge}>FOR THE INVESTMENT SEEKER</span>
                     <h1 className={styles.headline}>
