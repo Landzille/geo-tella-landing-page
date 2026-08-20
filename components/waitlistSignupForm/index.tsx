@@ -2,6 +2,8 @@
 import { useState, useEffect } from "react";
 import { CheckCircle } from "lucide-react";
 import styles from "./styles.module.css";
+import { ttqTrack, generateEventId } from "@/utils/tiktok";
+import { fbqTrack } from "@/utils/meta";
 
 type Props = {
     listId: number;
@@ -18,6 +20,8 @@ const WaitlistSignupForm = ({ listId, ctaLabel, gaEvent, viewEvent, theme, pdfUr
 
     useEffect(() => {
         window.gtag?.("event", viewEvent);
+        ttqTrack("ViewContent", { content_name: viewEvent });
+        fbqTrack("ViewContent", { content_name: viewEvent });
     }, [viewEvent]);
     const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState(false);
@@ -29,13 +33,23 @@ const WaitlistSignupForm = ({ listId, ctaLabel, gaEvent, viewEvent, theme, pdfUr
         setLoading(true);
         setError("");
         try {
+            const eventId = generateEventId();
             const res = await fetch("/api/subscribe", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ email, firstName, listId }),
+                body: JSON.stringify({
+                    email,
+                    firstName,
+                    listId,
+                    eventId,
+                    url: window.location.href,
+                }),
             });
             if (!res.ok) throw new Error("Failed");
             window.gtag?.("event", gaEvent);
+            ttqTrack("Lead", { content_name: gaEvent }, eventId);
+            fbqTrack("Lead", { content_name: gaEvent });
+            fbqTrack("CompleteRegistration", { content_name: gaEvent });
             if (pdfUrl) {
                 const a = document.createElement("a");
                 a.href = pdfUrl;

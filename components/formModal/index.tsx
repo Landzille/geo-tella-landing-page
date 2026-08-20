@@ -4,6 +4,8 @@ import { useState } from "react";
 import styles from "./styles.module.css";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { ttqTrack, generateEventId } from "@/utils/tiktok";
+import { fbqTrack } from "@/utils/meta";
 
 interface InvestorModalProps {
   onClose: () => void;
@@ -23,14 +25,24 @@ export default function InvestorModal({ onClose }: InvestorModalProps) {
     setStatus("loading");
 
     try {
+      const eventId = generateEventId();
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, firstName, listId: 10 }),
+        body: JSON.stringify({
+          email,
+          firstName,
+          listId: 10,
+          eventId,
+          url: window.location.href,
+        }),
       });
 
       if (!res.ok) throw new Error("Failed");
       window.gtag?.('event', 'investor_pack_click');
+      ttqTrack("Lead", { content_name: "investor_pack_click" }, eventId);
+      fbqTrack("Lead", { content_name: "investor_pack_click" });
+      fbqTrack("CompleteRegistration", { content_name: "investor_pack_click" });
       setStatus("success");
 
       setTimeout(() => {

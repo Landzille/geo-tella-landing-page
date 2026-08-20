@@ -4,6 +4,8 @@ import styles from "./styles.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { X, CheckCircle, AlertCircle } from "lucide-react";
+import { ttqTrack, generateEventId } from "@/utils/tiktok";
+import { fbqTrack } from "@/utils/meta";
 
 const HeroSection = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,15 +31,24 @@ const HeroSection = () => {
     setLoading(true);
 
     try {
+      const eventId = generateEventId();
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, listId: 9 }),
+        body: JSON.stringify({
+          email,
+          listId: 9,
+          eventId,
+          url: window.location.href,
+        }),
       });
 
       if (!res.ok) throw new Error("Failed");
 
       window.gtag?.('event', 'waitlist_signup');
+      ttqTrack("Lead", { content_name: "waitlist_signup" }, eventId);
+      fbqTrack("Lead", { content_name: "waitlist_signup" });
+      fbqTrack("CompleteRegistration", { content_name: "waitlist_signup" });
       showToast("success", "🎉 You're on the waitlist!");
       setEmail("");
     } catch {

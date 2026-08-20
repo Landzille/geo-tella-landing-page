@@ -1,10 +1,12 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { X, Globe, TrendingUp, ArrowUpRight, CheckCircle } from "lucide-react";
 import styles from "./styles.module.css";
+import { ttqTrack } from "@/utils/tiktok";
+import { fbqTrack } from "@/utils/meta";
 
 type Intent = "explore" | "invest";
 
@@ -20,7 +22,13 @@ const WaitlistPage = () => {
 
     const router = useRouter();
 
+    useEffect(() => {
+        ttqTrack("ViewContent", { content_name: "waitlist" });
+        fbqTrack("ViewContent", { content_name: "waitlist" });
+    }, []);
+
     const handleCardClick = (intent: Intent) => {
+        ttqTrack("ClickButton", { content_name: intent === "invest" ? "invest_intent" : "explore_intent" });
         router.push(intent === "invest" ? "/waitlist/investors" : "/waitlist/explorers");
     };
 

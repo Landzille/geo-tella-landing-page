@@ -1,7 +1,8 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
+import { sendTikTokLeadEvent } from "@/utils/tiktokEventsApi";
 
-export async function POST(req: Request) {
-  const { email, firstName, listId } = await req.json();
+export async function POST(req: NextRequest) {
+  const { email, firstName, listId, eventId, url } = await req.json();
 
   if (!email) {
     return NextResponse.json({ error: "Email is required" }, { status: 400 });
@@ -29,6 +30,17 @@ export async function POST(req: Request) {
     if (!response.ok) {
       const error = await response.json();
       return NextResponse.json(error, { status: response.status });
+    }
+
+    if (eventId) {
+      await sendTikTokLeadEvent({
+        email,
+        eventId,
+        url: url || req.headers.get("referer") || "",
+        ip: req.headers.get("x-forwarded-for")?.split(",")[0]?.trim(),
+        userAgent: req.headers.get("user-agent") ?? undefined,
+        ttp: req.cookies.get("_ttp")?.value,
+      });
     }
 
     return NextResponse.json({ success: true });
