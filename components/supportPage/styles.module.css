@@ -1,0 +1,219 @@
+.page {
+  background: #fdf5ec;
+  min-height: 100vh;
+}
+
+/* ── HEADER ── */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 0px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.logo {
+  width: 140px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav a {
+  color: #1c2939;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: opacity 0.15s;
+}
+
+.nav a:hover {
+  opacity: 0.7;
+}
+
+.cta {
+  background: #005629;
+  color: #fff !important;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+}
+
+@media (max-width: 640px) {
+  .header {
+    padding: 24px 20px;
+  }
+
+  .nav a:not(.cta) {
+    display: none;
+  }
+}
+
+/* ── CONTENT ── */
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0px 120px;
+}
+
+.heading {
+  color: #005629;
+  font-size: clamp(32px, 5vw, 44px);
+  margin-bottom: 8px;
+}
+
+.lede {
+  color: #475467;
+  line-height: 1.75;
+  font-size: 16px;
+  margin-bottom: 40px;
+  max-width: 640px;
+}
+
+/* ── CONTACT CARD ── */
+.contact {
+  background: #005629;
+  border-radius: 16px;
+  padding: 28px 32px;
+  margin-bottom: 56px;
+}
+
+.contactLabel {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.mail {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid #ff7800;
+  padding-bottom: 2px;
+  display: inline-block;
+}
+
+.contactNote {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 15px;
+  line-height: 1.75;
+  margin: 16px 0 0;
+}
+
+.contactNote strong {
+  color: #fff;
+}
+
+/* ── SECTIONS ── */
+.section {
+  margin-bottom: 36px;
+}
+
+.section h2 {
+  font-size: 22px;
+  color: #1c2939;
+  margin-bottom: 14px;
+}
+
+.section p {
+  color: #475467;
+  line-height: 1.75;
+  font-size: 15px;
+  margin-bottom: 14px;
+}
+
+.section a {
+  color: #005629;
+  text-decoration: underline;
+}
+
+/* ── FAQ ACCORDION ── */
+.faq {
+  background: #fff;
+  border: 1px solid #f0e6d8;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.faqSummary {
+  cursor: pointer;
+  padding: 18px 22px;
+  font-weight: 600;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 15px;
+  color: #1c2939;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.faqSummary::-webkit-details-marker {
+  display: none;
+}
+
+.faqSummary::after {
+  content: "+";
+  color: #005629;
+  font-weight: 700;
+  font-size: 20px;
+  flex: none;
+}
+
+.faq[open] .faqSummary::after {
+  content: "\2013";
+}
+
+.faqBody {
+  padding: 0 22px 20px;
+  color: #475467;
+}
+
+.faqBody p {
+  line-height: 1.75;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.faqBody p:last-child {
+  margin-bottom: 0;
+}
+
+.faqBody a {
+  color: #005629;
+  text-decoration: underline;
+}
+
+.faqBody strong {
+  color: #1c2939;
+}
+
+/* ── FOOTER LINKS ── */
+.footerLinks {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 12px;
+}
+
+.footerLinks a {
+  color: #005629;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.footerNote {
+  color: #475467;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-top: 48px;
+}
