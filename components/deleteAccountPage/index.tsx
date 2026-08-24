@@ -60,9 +60,8 @@ const DeleteAccountPage = () => {
           removed, and what is kept.
         </p>
         <p className={styles.intro}>
-          Geotela is published by Geotela Limited Liability Company. You can
-          delete your account at any time, either from inside the app or by
-          writing to us.
+          You can delete your account at any time, either from inside the app or
+          by writing to us.
         </p>
         <p className={styles.updated}>Last updated 21 August 2026</p>
 
@@ -83,8 +82,8 @@ const DeleteAccountPage = () => {
         <section className={styles.section}>
           <h2>If you no longer have the app</h2>
           <p>
-            Email <a href="mailto:hello@geotela.com">hello@geotela.com</a>{" "}
-            from the address on your account, with the subject line{" "}
+            Email <a href="mailto:hello@geotela.com">hello@geotela.com</a> from
+            the address on your account, with the subject line{" "}
             <strong>Delete my account</strong>.
           </p>
           <p>
@@ -153,12 +152,6 @@ const DeleteAccountPage = () => {
             <Link href="/privacy">geotela.com/privacy</Link>.
           </p>
         </section>
-
-        <p className={styles.footerNote}>
-          Geotela · published by Geotela Limited Liability Company
-          <br />
-          Last updated 21 August 2026
-        </p>
       </div>
     </div>
   );
