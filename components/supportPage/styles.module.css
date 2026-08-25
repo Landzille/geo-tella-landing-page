@@ -217,3 +217,19 @@
   line-height: 1.8;
   margin-top: 48px;
 }
+
+@media (max-width: 640px) {
+  .header {
+    padding: 24px 16px;
+  }
+
+  .content {
+    padding: 16px;
+  }
+
+  .footerLinks {
+    flex-direction: column;
+    gap: 20;
+    margin-bottom: 12px;
+  }
+}
