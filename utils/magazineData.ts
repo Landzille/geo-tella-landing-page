@@ -33,6 +33,6 @@ export const magazineData: Magazine[] = [
         title: "Geotela Magazine Vol. 4",
         description: "What Does Location Intelligence Actually Mean For You",
         image: "/assets/volume4.jpeg",
-        pdfUrl: "/magazines/Geotela-Magazine -Volume-4.pdf",
+        pdfUrl: "/magazines/Geotela-Magazine-Volume-4.pdf",
     },
 ];
