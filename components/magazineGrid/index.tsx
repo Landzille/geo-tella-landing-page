@@ -1,18 +1,12 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { Download, ChevronLeft, ChevronRight } from "lucide-react";
-import { magazineData, type Magazine } from "@/utils/magazineData";
+import Link from "next/link";
+import { Eye, ChevronLeft, ChevronRight } from "lucide-react";
+import { magazineData, slugify } from "@/utils/magazineData";
 import styles from "./styles.module.css";
 
 const PAGE_SIZE = 6;
-
-const trackDownload = (magazine: Magazine) => {
-    window.gtag?.("event", "magazine_download", {
-        magazine_id: magazine.id,
-        magazine_title: magazine.title,
-    });
-};
 
 const MagazineGrid = () => {
     const [page, setPage] = useState(1);
@@ -29,29 +23,33 @@ const MagazineGrid = () => {
             <div className={styles.grid}>
                 {visibleMagazines.map((magazine) => (
                     <article key={magazine.id} className={styles.card}>
-                        <div className={styles.imageWrapper}>
-                            <Image
-                                src={magazine.image}
-                                alt={magazine.title}
-                                width={480}
-                                height={360}
-                                className={styles.image}
-                            />
-                        </div>
+                        <Link href={`/magazines/${slugify(magazine.title)}`}>
+                            <div className={styles.imageWrapper}>
+                                <Image
+                                    src={magazine.image}
+                                    alt={magazine.title}
+                                    width={480}
+                                    height={360}
+                                    className={styles.image}
+                                />
+                            </div>
+                        </Link>
 
                         <div className={styles.cardBody}>
-                            <h3>{magazine.title}</h3>
+                            <h3>
+                                <Link href={`/magazines/${slugify(magazine.title)}`}>
+                                    {magazine.title}
+                                </Link>
+                            </h3>
                             <p>{magazine.description}</p>
                             <hr />
-                            <a
-                                href={magazine.pdfUrl}
-                                download
-                                onClick={() => trackDownload(magazine)}
+                            <Link
+                                href={`/magazines/${slugify(magazine.title)}`}
                                 className={styles.downloadLink}
                             >
-                                Download Now
-                                <Download size={16} strokeWidth={2} />
-                            </a>
+                                Preview
+                                <Eye size={16} strokeWidth={2} />
+                            </Link>
                         </div>
                     </article>
                 ))}
