@@ -1,11 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { X, Globe, TrendingUp, ArrowUpRight } from "lucide-react";
+import { X, CheckCircle } from "lucide-react";
 import styles from "./styles.module.css";
-import { ttqTrack } from "@/utils/tiktok";
+import { ttqTrack, generateEventId } from "@/utils/tiktok";
 import { fbqTrack } from "@/utils/meta";
 
 const POPUP_DELAY_MS = 5000;
@@ -32,6 +31,10 @@ const WaitlistPopup = () => {
 
 const PopupForPath = () => {
     const [open, setOpen] = useState(false);
+    const [email, setEmail] = useState("");
+    const [loading, setLoading] = useState(false);
+    const [success, setSuccess] = useState(false);
+    const [error, setError] = useState("");
 
     useEffect(() => {
         const timer = setTimeout(() => setOpen(true), POPUP_DELAY_MS);
@@ -61,11 +64,34 @@ const PopupForPath = () => {
 
     if (!open) return null;
 
-    const handleIntentClick = (intent: "explore" | "invest") => {
-        ttqTrack("ClickButton", {
-            content_name: intent === "invest" ? "invest_intent" : "explore_intent",
-        });
-        setOpen(false);
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        if (!email) return;
+        setLoading(true);
+        setError("");
+        try {
+            const eventId = generateEventId();
+            const res = await fetch("/api/subscribe", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    email,
+                    listId: 9,
+                    eventId,
+                    url: window.location.href,
+                }),
+            });
+            if (!res.ok) throw new Error("Failed");
+            window.gtag?.("event", "waitlist_signup");
+            ttqTrack("Lead", { content_name: "waitlist_signup" }, eventId);
+            fbqTrack("Lead", { content_name: "waitlist_signup" });
+            fbqTrack("CompleteRegistration", { content_name: "waitlist_signup" });
+            setSuccess(true);
+        } catch {
+            setError("Something went wrong. Please try again.");
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
@@ -85,52 +111,42 @@ const PopupForPath = () => {
                     <X size={16} strokeWidth={2} />
                 </button>
 
-                <div className={styles.header}>
-                    <span className={styles.badge}>EARLY ACCESS</span>
-                    <h2 className={styles.title}>
-                        Don&apos;t miss your invite to <span className={styles.green}>GeoTela</span>
-                    </h2>
-                    <p className={styles.desc}>
-                        Join the waitlist and lock in free launch tokens, a founding
-                        badge, and first access &mdash; before we open the doors.
-                    </p>
-                </div>
+                {success ? (
+                    <div className={styles.success}>
+                        <CheckCircle size={44} strokeWidth={1.5} color="#005629" />
+                        <h2 className={styles.title}>You&apos;re on the list!</h2>
+                        <p className={styles.desc}>
+                            Your invite lands the moment we open the doors.
+                        </p>
+                    </div>
+                ) : (
+                    <>
+                        <div className={styles.header}>
+                            <span className={styles.badge}>EARLY ACCESS</span>
+                            <h2 className={styles.title}>
+                                Don&apos;t miss your invite to <span className={styles.green}>GeoTela</span>
+                            </h2>
+                            <p className={styles.desc}>
+                                Join the waitlist and lock in free launch tokens, a founding
+                                badge, and first access &mdash; before we open the doors.
+                            </p>
+                        </div>
 
-                <div className={styles.cards}>
-                    <Link
-                        href="/waitlist/explorers"
-                        className={`${styles.card} ${styles.cardExplore}`}
-                        onClick={() => handleIntentClick("explore")}
-                    >
-                        <div className={styles.cardTop}>
-                            <Globe size={24} strokeWidth={1.5} />
-                            <ArrowUpRight size={16} className={styles.arrowIcon} />
-                        </div>
-                        <div className={styles.cardBottom}>
-                            <h3>I&apos;m here to explore</h3>
-                            <p>Stories, culture and history behind every place.</p>
-                        </div>
-                    </Link>
-
-                    <Link
-                        href="/waitlist/investors"
-                        className={`${styles.card} ${styles.cardInvest}`}
-                        onClick={() => handleIntentClick("invest")}
-                    >
-                        <div className={styles.cardTop}>
-                            <TrendingUp size={24} strokeWidth={1.5} />
-                            <ArrowUpRight size={16} className={styles.arrowIcon} />
-                        </div>
-                        <div className={styles.cardBottom}>
-                            <h3>I&apos;m looking to invest</h3>
-                            <p>Growth signals and the thesis behind the platform.</p>
-                        </div>
-                    </Link>
-                </div>
-
-                <button className={styles.dismiss} onClick={() => setOpen(false)}>
-                    Not now
-                </button>
+                        <form className={styles.form} onSubmit={handleSubmit}>
+                            <input
+                                type="email"
+                                placeholder="Enter your email"
+                                value={email}
+                                required
+                                onChange={(e) => setEmail(e.target.value)}
+                            />
+                            <button type="submit" disabled={loading}>
+                                {loading ? "Submitting..." : "Claim founding access"}
+                            </button>
+                        </form>
+                        {error && <p className={styles.error}>{error}</p>}
+                    </>
+                )}
             </div>
         </div>
     );
