@@ -1,0 +1,232 @@
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(28, 41, 57, 0.55);
+    backdrop-filter: blur(2px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100000;
+    padding: 20px;
+    animation: fadeIn 0.25s ease;
+}
+
+.modal {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    background: #f6ede4;
+    border-radius: 24px;
+    padding: 40px 36px 32px;
+    box-shadow: 0 32px 64px -16px rgba(28, 41, 57, 0.35);
+    animation: popIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.closeBtn {
+    position: absolute;
+    top: -16px;
+    right: -16px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #1c2939;
+    color: #fff;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.closeBtn:hover {
+    background: #005629;
+    transform: scale(1.06);
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.badge {
+    align-self: center;
+    display: inline-block;
+    padding: 6px 16px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: #005629;
+    border: 1px solid #005629;
+    border-radius: 100px;
+    width: fit-content;
+}
+
+.title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #1c2939;
+}
+
+.green {
+    color: #005629;
+}
+
+.desc {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #475467;
+}
+
+/* ── INTENT CARDS ── */
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+    min-height: 150px;
+    border-radius: 16px;
+    padding: 18px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(28, 41, 57, 0.14);
+}
+
+.cardExplore {
+    background: linear-gradient(294.87deg, #FFBE8C 28.07%, #FF7800 100%);
+    color: #1c2939;
+}
+
+.cardInvest {
+    background: linear-gradient(294.87deg, #0A974D 28.07%, #005629 100%);
+    color: #ffffff;
+}
+
+.cardTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.arrowIcon {
+    opacity: 0.7;
+}
+
+.cardBottom h3 {
+    margin: 0 0 4px 0;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.cardExplore .cardBottom h3 {
+    color: #1c2939;
+}
+
+.cardInvest .cardBottom h3 {
+    color: #ffffff;
+}
+
+.cardBottom p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.cardExplore .cardBottom p {
+    color: rgba(28, 41, 57, 0.75);
+}
+
+.cardInvest .cardBottom p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* ── DISMISS ── */
+.dismiss {
+    display: block;
+    margin: 20px auto 0;
+    background: none;
+    border: none;
+    color: #475467;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.dismiss:hover {
+    color: #1c2939;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media (max-width: 480px) {
+    .modal {
+        padding: 32px 24px 28px;
+        border-radius: 20px;
+    }
+
+    .title {
+        font-size: 21px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        min-height: auto;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .cardTop {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .arrowIcon {
+        display: none;
+    }
+}

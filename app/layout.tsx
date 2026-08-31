@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Source_Serif_4 } from "next/font/google";
 import Script from "next/script";
+import WaitlistPopup from "@/components/waitlistPopup";
 import "./globals.css";
 
 const jakartaSans = Plus_Jakarta_Sans({
@@ -82,6 +83,7 @@ export default function RootLayout({
         </Script>
 
         {children}
+        <WaitlistPopup />
       </body>
     </html>
   );
