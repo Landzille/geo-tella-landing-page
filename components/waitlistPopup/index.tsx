@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { X, CheckCircle } from "lucide-react";
 import styles from "./styles.module.css";
@@ -8,6 +8,7 @@ import { ttqTrack, generateEventId } from "@/utils/tiktok";
 import { fbqTrack } from "@/utils/meta";
 
 const POPUP_DELAY_MS = 5000;
+const SEEN_KEY = "geotela_waitlist_popup_seen";
 
 // Pages where a "join the waitlist" popup is redundant, or would
 // break an intentionally full-viewport / distraction-free layout.
@@ -23,23 +24,43 @@ const isExcluded = (pathname: string) =>
 
 const WaitlistPopup = () => {
     const pathname = usePathname();
-    if (isExcluded(pathname)) return null;
-    // Keying by pathname remounts (and so resets) the popup on every
-    // navigation, re-arming the 5s timer for the new page.
-    return <PopupForPath key={pathname} />;
-};
-
-const PopupForPath = () => {
     const [open, setOpen] = useState(false);
+    const [ready, setReady] = useState(false);
     const [email, setEmail] = useState("");
     const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState(false);
     const [error, setError] = useState("");
+    // Tracks whether the popup has already been shown this browser
+    // session (tab), so it fires at most once per visit regardless
+    // of how many pages the user moves across.
+    const shownRef = useRef(false);
 
     useEffect(() => {
-        const timer = setTimeout(() => setOpen(true), POPUP_DELAY_MS);
+        try {
+            if (sessionStorage.getItem(SEEN_KEY)) shownRef.current = true;
+        } catch {
+            // sessionStorage unavailable (e.g. private mode) — fall
+            // back to showing once per mount, which is still once
+            // per tab in practice.
+        }
+        if (shownRef.current) return;
+        const timer = setTimeout(() => setReady(true), POPUP_DELAY_MS);
         return () => clearTimeout(timer);
     }, []);
+
+    // Once the 5s delay has elapsed, show as soon as we're on a page
+    // where the popup is allowed — immediately if that's already the
+    // current page, or the moment the user navigates to one.
+    useEffect(() => {
+        if (!ready || shownRef.current || isExcluded(pathname)) return;
+        shownRef.current = true;
+        try {
+            sessionStorage.setItem(SEEN_KEY, "1");
+        } catch {
+            // ignore
+        }
+        setOpen(true);
+    }, [ready, pathname]);
 
     useEffect(() => {
         if (!open) return;
