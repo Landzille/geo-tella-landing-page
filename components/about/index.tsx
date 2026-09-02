@@ -25,7 +25,7 @@ const About = () => {
           like someone who has always known it.
         </p>
         <button className={styles.cta} onClick={() => setModalOpen(true)}>
-          Download Investors Starter Pack
+          Download Our Starter Pack
         </button>
       </div>
       <div className={styles.colTwo}>
