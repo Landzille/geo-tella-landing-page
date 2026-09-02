@@ -80,7 +80,7 @@ const InvestorsPage = () => {
                 <div className={styles.heroRight}>
                     <WaitlistSignupForm
                         listId={11}
-                        ctaLabel="Claim my edge"
+                        ctaLabel="Get Early Access — Free"
                         viewEvent="investor_form_view"
                         gaEvent="investor_waitlist_signup"
                         theme="light"
