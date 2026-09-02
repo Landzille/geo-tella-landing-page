@@ -41,10 +41,10 @@ export default function GroundTruth() {
             The World Cup creates a six-week period where short-let demand, foot
             traffic, and infrastructure stress are all moving at once.
             Geotela&apos;s contributor network captures every signal — verified,
-            timestamped, and surfaced to founding investors first.
+            timestamped, and surfaced to early community members first.
           </p>
           <button className={styles.cta} onClick={() => setModalOpen(true)}>
-            Download Investors Starter Pack
+            Download Your Starter Pack
           </button>
         </div>
 
