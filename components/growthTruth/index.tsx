@@ -33,7 +33,7 @@ export default function GroundTruth() {
     <>
       <section className={styles.section}>
         <div className={styles.left}>
-          <span className={styles.badge}>Investor Access</span>
+          <span className={styles.badge}>Pioneer Access</span>
           <h1 className={styles.heading}>
             Ground-Truth Intelligence on Frontier Markets.
           </h1>
