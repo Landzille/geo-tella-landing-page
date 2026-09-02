@@ -79,7 +79,7 @@ const ExplorersPage = () => {
                 <div className={styles.heroRight}>
                     <WaitlistSignupForm
                         listId={12}
-                        ctaLabel="Save my spot"
+                        ctaLabel="Get Early Access — Free"
                         viewEvent="explorer_form_view"
                         gaEvent="explorer_waitlist_signup"
                         theme="dark"
