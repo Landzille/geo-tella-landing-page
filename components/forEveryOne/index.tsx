@@ -32,7 +32,7 @@ const investors = [
     description: "Infrastructure signals and growth corridors",
   },
   {
-    title: "Investors and VCs",
+    title: "Analysts and VCs",
     description: "Experience the market before you commit to it",
   },
   {
