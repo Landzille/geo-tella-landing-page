@@ -150,7 +150,6 @@ const WaitlistSignupForm = ({ listId, ctaLabel, gaEvent, viewEvent, theme, pdfUr
 
                         <div className={styles.perks} data-theme={theme}>
                             <span>Free launch tokens</span>
-                            <span>Founding Investor badge</span>
                             <span>First access</span>
                         </div>
                     </form>
