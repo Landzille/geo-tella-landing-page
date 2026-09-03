@@ -94,7 +94,7 @@ const InvestorsPage = () => {
                 cards={features}
             />
 
-            <WaitlistCta heading="Invest on ground truth, not gut feeling. Be one of the first investors in when Geotela launches." />
+            <WaitlistCta heading="Build on ground truth, not gut feeling. Be one of the first to gain access when Geotela launches." />
         </div>
     );
 };
