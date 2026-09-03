@@ -17,7 +17,7 @@ const sourceSerif4 = Source_Serif_4({
 export const metadata: Metadata = {
   title: "GeoTela",
   description:
-    "Your interactive travel buddy for discovering the world through stories, culture, and history.",
+    "Your geointelligence app for discovering the world through stories, culture, and history.",
 };
 
 export default function RootLayout({
