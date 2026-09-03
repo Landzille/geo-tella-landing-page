@@ -145,7 +145,7 @@ const WaitlistPage = () => {
                             </button>
                         </div>
                         <div className={styles.cardBottom}>
-                            <h2>I&apos;m looking to invest</h2>
+                            <h2>I&apos;m looking for Growth Opportunites</h2>
                             <p>
                                 Turn geographic data into growth signals, risk scores and
                                 opportunity maps.
