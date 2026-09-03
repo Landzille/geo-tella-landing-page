@@ -42,7 +42,7 @@ const WaitlistNav = ({ active, theme = "light" }: Props) => {
                             className={`${styles.pill} ${active === "investors" ? styles.pillInvestors : styles.pillInactive}`}
                             data-theme={theme}
                         >
-                            Investors
+                            Growth Seekers
                         </Link>
                     </div>
                     <button
