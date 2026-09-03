@@ -28,7 +28,7 @@ const investors = [
     description: "Community verified data on cities and markets",
   },
   {
-    title: "Investment seekers",
+    title: "Intelligence seekers",
     description: "Infrastructure signals and growth corridors",
   },
   {
@@ -48,7 +48,7 @@ export default function ForEveryOne() {
         <div className={styles.textHeader}>
           <span className={styles.badge}>GEOTELA IS FOR</span>
           <h2 className={styles.heading}>Every kind of</h2>
-          <p className={styles.subheading}>Explorer and Investment seeker.</p>
+          <p className={styles.subheading}>Explorer and Growth seeker.</p>
         </div>
         <div>
           <Image src="/assets/fly.png" width={67} height={80} alt="fly" />
@@ -85,7 +85,7 @@ export default function ForEveryOne() {
         <div className={styles.cardDark}>
           <House />
           <div className={styles.cardMain}>
-            <h3 className={styles.cardTitleDark}>Investment seekers</h3>
+            <h3 className={styles.cardTitleDark}>Growth seekers</h3>
             <p className={styles.cardDescDark}>
               Ground-truth intelligence on frontier markets, before you commit a
               single decision.
