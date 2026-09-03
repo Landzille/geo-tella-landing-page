@@ -80,7 +80,7 @@ const WaitlistNav = ({ active, theme = "light" }: Props) => {
                             <Link href="/" onClick={() => setIsMenuOpen(false)}>Home</Link>
                             <Link href="/magazines" onClick={() => setIsMenuOpen(false)}>Magazines</Link>
                             <Link href="/waitlist/explorers" onClick={() => setIsMenuOpen(false)}>Explorers</Link>
-                            <Link href="/waitlist/investors" onClick={() => setIsMenuOpen(false)}>Investors</Link>
+                            <Link href="/waitlist/investors" onClick={() => setIsMenuOpen(false)}>Growth Seekers</Link>
                         </div>
                         <Link
                             href="/waitlist"
