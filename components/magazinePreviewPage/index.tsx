@@ -25,27 +25,53 @@ const trackDownload = (magazine: Magazine) => {
   });
 };
 
+const copyToClipboard = async (url: string) => {
+  if (navigator.clipboard?.writeText) {
+    await navigator.clipboard.writeText(url);
+    return;
+  }
+  // Fallback for browsers / in-app webviews without the Clipboard API.
+  const textarea = document.createElement("textarea");
+  textarea.value = url;
+  textarea.style.position = "fixed";
+  textarea.style.opacity = "0";
+  document.body.appendChild(textarea);
+  textarea.focus();
+  textarea.select();
+  const ok = document.execCommand("copy");
+  document.body.removeChild(textarea);
+  if (!ok) throw new Error("copy command failed");
+};
+
 const MagazinePreviewPage = ({ magazine, others }: Props) => {
   const [copied, setCopied] = useState(false);
+  const [shareError, setShareError] = useState(false);
   const magazineLabel = getMagazineLabel(magazine.title);
 
   const handleShare = async () => {
     const url = window.location.href;
+    const shareData = { title: magazine.title, text: magazine.description, url };
+
     if (navigator.share) {
       try {
-        await navigator.share({
-          title: magazine.title,
-          text: magazine.description,
-          url,
-        });
-      } catch {
-        // user cancelled the share sheet — nothing to do
+        if (!navigator.canShare || navigator.canShare(shareData)) {
+          await navigator.share(shareData);
+          return;
+        }
+      } catch (err) {
+        if ((err as Error)?.name === "AbortError") return; // user cancelled
+        // otherwise fall through to the clipboard fallback below
       }
-      return;
     }
-    await navigator.clipboard.writeText(url);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+
+    try {
+      await copyToClipboard(url);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      setShareError(true);
+      setTimeout(() => setShareError(false), 2500);
+    }
   };
 
   return (
@@ -106,7 +132,7 @@ const MagazinePreviewPage = ({ magazine, others }: Props) => {
               className={`${styles.actionBtn} ${styles.shareBtn}`}
             >
               {copied ? <Check size={16} /> : <Share2 size={16} />}
-              {copied ? "Copied" : "Share"}
+              {copied ? "Copied" : shareError ? "Couldn't share" : "Share"}
             </button>
             <a
               href={magazine.pdfUrl}

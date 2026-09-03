@@ -199,7 +199,7 @@
 
 @media (max-width: 720px) {
   .previewRow {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 
   .actions {
