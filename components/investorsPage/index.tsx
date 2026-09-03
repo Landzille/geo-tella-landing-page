@@ -38,13 +38,13 @@ const InvestorsPage = () => {
             {/* ── HERO ── */}
             <section className={styles.hero} id="form">
                 <div className={styles.heroLeft}>
-                    <span className={styles.badge}>FOR THE INVESTMENT SEEKER</span>
+                    <span className={styles.badge}>FOR THE GROWTH SEEKER</span>
                     <h1 className={styles.headline}>
                         The place everyone&apos;s watching. The data nobody&apos;s
                         sharing.
                     </h1>
                     <p className={styles.body}>
-                        Institutional investors pay consultants for ground-level
+                        Institutional stakeholders pay consultants for ground-level
                         intelligence. Geotela puts it in your hands — verified by people
                         on the ground, timestamped, and never sponsored. See where a
                         market is heading, not just where it stands. Join the waitlist and
