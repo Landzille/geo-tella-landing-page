@@ -4,7 +4,7 @@ import Copyright from "@/components/copyright";
 import Footer from "@/components/footer";
 import ForEveryOne from "@/components/forEveryOne";
 // import GeotellaComp from "@/components/geotela";
-import GroundTruth from "@/components/growthTruth";
+// import GroundTruth from "@/components/growthTruth";
 import HeroSection from "@/components/heroSection/page";
 import HowitWorks from "@/components/howItWorks";
 import OtherStuffs from "@/components/otherstuffs";
@@ -25,7 +25,7 @@ const LandingPage = () => {
       {/* <GeotellaComp /> */}
       <ForEveryOne />
       {/* <WorldCupBand /> */}
-      <GroundTruth />
+      {/* <GroundTruth /> */}
       <ComingSoon />
       <Footer />
       <Copyright />
