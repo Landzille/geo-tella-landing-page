@@ -26,6 +26,13 @@ export function getMagazineLabel(title: string): string | null {
 
 export const magazineData: Magazine[] = [
     {
+        id: 5,
+        title: "Geotela Magazine Vol. 4",
+        description: "What Does Location Intelligence Actually Mean For You",
+        image: "/assets/Geotela-Issue-5.jpeg",
+        pdfUrl: "/magazines/Geotela-Issue-5-September.pdf",
+    },
+    {
         id: 4,
         title: "Geotela Magazine Vol. 4",
         description: "What Does Location Intelligence Actually Mean For You",
