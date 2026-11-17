@@ -25,6 +25,13 @@ export function getMagazineLabel(title: string): string | null {
 }
 
 export const magazineData: Magazine[] = [
+        {
+        id: 6,
+        title: "Dodd City Economic Signals Report",
+        description: "Geotela Signals Vol.1 No.1",
+        image: "/assets/Geotela-Signals-vol1.jpeg",
+        pdfUrl: "/magazines/Dodd-City-E-Magazine .pdf",
+    },
     {
         id: 5,
         title: "Geotela Magazine Vol. 5",
